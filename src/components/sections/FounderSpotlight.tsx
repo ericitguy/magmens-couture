@@ -25,7 +25,8 @@ export function FounderSpotlight() {
           <Reveal className="lg:col-span-5">
             {founder.portraitSlug ? (
               <figure className="group relative">
-                <div className="relative aspect-4/5 w-full overflow-hidden bg-porcelain">
+                {/* 2:3 matches the supplied portrait, so no part of her is cropped. */}
+                <div className="relative aspect-2/3 w-full overflow-hidden bg-porcelain">
                   <EditorialImage
                     slug={founder.portraitSlug}
                     alt={`${founder.name}, ${founder.role} of Magmens Couture.`}

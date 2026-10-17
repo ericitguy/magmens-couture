@@ -15,11 +15,12 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
             <Image
-              src="/brand/magmens-monogram.png"
+              src="/brand/magmens-emblem-inverse.png"
               alt=""
-              width={640}
-              height={640}
-              className="mb-6 h-14 w-14"
+              aria-hidden="true"
+              width={472}
+              height={240}
+              className="mb-5 h-12 w-auto"
             />
             <Wordmark onDark />
             <p className="body-copy-on-dark measure-tight mt-6 text-[0.9375rem]">

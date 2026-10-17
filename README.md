@@ -140,8 +140,16 @@ founder page renders them as a numbered grid, newest first.
 
 **Replace the logo.** Overwrite `public/brand/magmens-monogram.png` (square PNG),
 then regenerate the favicons from it: `src/app/icon.png` at 512×512 and
-`src/app/apple-icon.png` at 180×180. The footer mark and the founder brand plate
-use the same file.
+`src/app/apple-icon.png` at 180×180. The founder brand plate uses the same file.
+
+The header lockup is not that square: it pairs the studio's MC emblem with the
+name set in type, because the circular artwork is unreadable below ~110px. Both
+emblem files are cut from the supplied logo artwork by
+`npm run brand:assets -- "more photos/logo.PNG"`:
+`magmens-emblem.png` (ink, for ivory surfaces) and `magmens-emblem-inverse.png`
+(single ivory ink, for the transparent header over a hero photograph). Rerun it
+if the artwork changes, and add `showMark` to a `<Wordmark>` to use the emblem
+anywhere else.
 
 **Add a testimonial.** Genuine, approved reviews only. Add them to the
 `testimonials` array in `src/content/journey.ts` and the placeholder section
@@ -163,6 +171,21 @@ text — the site never links to a guessed destination.
 descriptive alt text, run `npm run images`, then set `founder.portraitSlug` in
 `src/content/story.ts`. The monogram plate on the homepage and the founder page
 is replaced by the photograph.
+
+**Add an award photograph.** Drop the file into `./photos` with a descriptive
+name, add it to the `SOURCES` list in `scripts/prepare-images.mjs` with the
+matching award slug, add a `gallery.ts` entry whose `tags` include
+`"occasion"` or `"atelier"` so it appears in the public gallery, run `npm run
+images`, then add an `image` field to the award in `src/content/story.ts`:
+the section renders one photo per award by matching `image` to the slug.
+Verify the award's name in the photo first — each award entry references one
+verified image only.
+
+The current portrait is the studio's photograph of Marian in the red sequin
+gown, which is already prepared for the reception and occasion-wear galleries —
+so it reuses that master (`reception-red-sequin-ruffle`) instead of a duplicate.
+Its gallery entry names her, and the founder frame is 2:3 to match the file, so
+replacing this one needs a photograph of the same proportions to stay uncropped.
 
 **Change a collection's copy or imagery.** Edit
 `src/content/collections.ts` — `intro`, `characteristics`, `galleryImages`,

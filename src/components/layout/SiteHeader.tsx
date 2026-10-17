@@ -104,7 +104,7 @@ export function SiteHeader() {
       >
         {/* Row one: the lockup, a quiet studio line and the booking action. */}
         <div className="shell flex h-19 items-center justify-between gap-6 md:h-21">
-          <Wordmark onDark={overHero} />
+          <Wordmark onDark={overHero} showMark />
 
           <div className="flex items-center gap-6">
             <p
@@ -222,7 +222,7 @@ export function SiteHeader() {
           }`}
         >
           <div className="flex items-center justify-between">
-            <Wordmark onDark />
+            <Wordmark onDark showMark />
             <button
               type="button"
               tabIndex={menuOpen ? 0 : -1}
