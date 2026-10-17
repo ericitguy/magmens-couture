@@ -9,8 +9,8 @@
  */
 
 export const privacyMeta = {
-  version: "1.0",
-  lastUpdated: "16 October 2026",
+  version: "1.1",
+  lastUpdated: "17 October 2026",
   intro:
     "This notice explains what happens to the information you send through this website, why it is needed, where it is kept and how you can have it removed.",
 } as const;
@@ -92,7 +92,7 @@ export const privacySections: PrivacySection[] = [
         ],
       },
     ],
-    note: "Other than these processors, and where the law requires it, your information is not shared with anyone else.",
+    note: "Consultation requests also appear in the studio's own private calendar, which the studio subscribes to from its calendar app (for example Google Calendar or Apple Calendar). That feed is protected by a private token and is visible only to the studio. Other than these processors, and where the law requires it, your information is not shared with anyone else.",
   },
   {
     id: "retention",
@@ -130,7 +130,7 @@ export const privacySections: PrivacySection[] = [
         ],
       },
     ],
-    note: "To make any of these requests, contact the studio by telephone or WhatsApp at +233 24 830 4463, or through the contact form. Please give the name and email address you used so the right record can be found.",
+    note: "To make any of these requests, contact the studio by telephone or WhatsApp at +233 24 830 4463, by email at mariangiftymensah@gmail.com, or through the contact form. Please give the name and email address you used so the right record can be found.",
   },
   {
     id: "children",
