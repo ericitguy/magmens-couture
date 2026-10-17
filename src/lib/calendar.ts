@@ -1,4 +1,4 @@
-import { brand, contact } from "@/content/site";
+import { brand, budgetRanges, contact, occasions } from "@/content/site";
 
 /**
  * Calendar output for appointment requests.
@@ -58,24 +58,29 @@ const TIME = /^\d{2}:\d{2}$/;
 
 const atelierLocation = `${brand.name}, ${contact.address.lines.join(", ")}`;
 
-function occasionLabel(value?: string): string | undefined {
+/** Prefers the studio's own wording over a slug when one matches. */
+function labelFor(
+  options: readonly { value: string; label: string }[],
+  value?: string,
+): string | undefined {
   if (!value) return undefined;
-  return value
-    .split("-")
-    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+  return options.find((option) => option.value === value)?.label ?? value;
 }
 
 function describe(record: CalendarRecord, reference?: string): string {
   const lines = [
     reference ? `Reference: ${reference}` : undefined,
-    record.occasion ? `Occasion: ${occasionLabel(record.occasion)}` : undefined,
+    record.occasion
+      ? `Occasion: ${labelFor(occasions, record.occasion)}`
+      : undefined,
     record.service ? `Collection: ${record.service}` : undefined,
     record.method
       ? `Consultation: ${record.method === "virtual" ? "Video call" : "In person at the atelier"}`
       : undefined,
     record.eventDate ? `Event date: ${record.eventDate}` : undefined,
-    record.budget ? `Budget: ${record.budget}` : undefined,
+    record.budget
+      ? `Budget: ${labelFor(budgetRanges, record.budget)}`
+      : undefined,
     record.inspiration
       ? `Inspiration: ${record.inspiration.slice(0, 600)}`
       : undefined,
