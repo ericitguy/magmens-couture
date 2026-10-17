@@ -226,8 +226,9 @@ export const policySections: PolicySection[] = [
     number: "12",
     title: "Entire Agreement",
     paragraphs: [
-      "These policies represent the studio's stated terms for consultations, payments, design approval, production, fittings and collection.",
-      "By proceeding with a consultation, payment, or production, clients acknowledge the applicable policies, subject to any mandatory legal requirements.",
+      "These policies constitute the entire agreement between Magmens Couture and the client.",
+      "No verbal or written agreements outside this document shall apply unless officially amended by Magmens Couture.",
+      "By proceeding with a consultation, payment, or production, clients confirm acceptance of these policies.",
     ],
   },
 ];
