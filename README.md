@@ -43,7 +43,9 @@ Other scripts:
 | `npm run images` | Rebuild the photography derivatives and social cards |
 | `npm run enquiries` | Print recent enquiries from the local file store |
 
-Node 20.9 or newer is required (Next.js 15).
+Node 24 is required. It is pinned in `package.json` (`engines`) and in `.nvmrc`,
+so `nvm use` selects the right version locally and Vercel builds on the same
+major version.
 
 ---
 
@@ -301,7 +303,7 @@ Then confirm the environment:
 
 1. Push the repository to GitHub (or connect your preferred source).
 2. Import it in Vercel. Framework preset: **Next.js**. Build command
-   `npm run build`, install command `npm install`, Node 20 (pinned in
+   `npm run build`, install command `npm install`, Node 24 (pinned in
    `package.json`). No other overrides are needed — no environment variables are
    required just to build.
 3. Add the environment variables from the table above. Set them for **both

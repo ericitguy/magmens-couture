@@ -4,7 +4,7 @@
   "private": true,
   "description": "Magmens Couture — luxury bridal and bespoke couture fashion house, Obuasi, Ghana.",
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "next dev -p 4310",
