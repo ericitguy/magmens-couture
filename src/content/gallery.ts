@@ -168,6 +168,38 @@ export const galleryItems: GalleryItem[] = [
     tags: ["atelier", "occasion"],
   },
   {
+    slug: "award-gopa-2026",
+    alt: "Two women with trophies and a GOPA banner, Ghana Outstanding Personality Award 2026",
+    caption: "Ghana Outstanding Personality Award — 2026",
+    description:
+      "Two women receiving the Ghana Outstanding Personality Award in 2026, each holding a black and gold star-shaped trophy beside a vertical banner reading Ghana Outstanding Personality Award.",
+    tags: ["traditional", "occasion"],
+  },
+  {
+    slug: "award-citation-2026",
+    alt: "Three people presenting an award on stage, with a Citation plaque and LED screen background.",
+    caption: "Citation Award — 2026",
+    description:
+      "Three people on stage presenting a citation award. Center: a woman in a silver pleated gown and dark fascinator holding the left side of a framed Citation plaque. Left: an older man in a black kufi and agbada robe. Right: a woman in a pink layered tulle dress.",
+    tags: ["occasion", "atelier"],
+  },
+  {
+    slug: "award-collective-2026",
+    alt: "Nineteen individuals standing on a stage posing with awards and framed portraits, GOPA stage banner visible.",
+    caption: "Collective Award — 2026",
+    description:
+      "Nineteen individuals (12 men and 7 women) on stage posing with awards and framed portraits beneath a purple stage backdrop with a white circular logo and stars.",
+    tags: ["occasion", "atelier"],
+  },
+  {
+    slug: "award-citation-2026-extra",
+    alt: "Three people presenting an award on stage, similar to award-citation-2026 but a different photograph from the same WhatsApp share.",
+    caption: "Citation Award (extra) — 2026",
+    description:
+      "Three people on stage presenting a citation award. A different photograph from the same Oct 17, 2026 WhatsApp share: same staging, same Citation plaque, same three figures in identical outfits.",
+    tags: ["occasion", "atelier"],
+  },
+  {
     slug: "traditional-copper-beaded-kente",
     alt: "Client in a copper beaded tulle mermaid gown with a Kente-panel bust, densely beaded bodice and a train edged in red, black and white Kente cloth, photographed against a bronze backdrop.",
     caption: "Copper beaded tulle with a Kente-panel bust",

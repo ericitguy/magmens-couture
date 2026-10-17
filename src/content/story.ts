@@ -83,6 +83,10 @@ export const awards = [
   { year: "2016", title: "Winner, Fashion Guru Sewing Bee", organisation: "Joy Prime TV", body: "Crowned champion of the maiden edition of the Fashion Guru Sewing Bee.", image: null },
   { year: "2019", title: "Fashion Excellence Award", organisation: "Bryte Africa Fashion Week", body: "Received for excellence in fashion design.", image: null },
   { year: "2017", title: "Finalist, VLISCO Fashion Fund Competition", organisation: "VLISCO Fashion Fund", body: "Recognised as a finalist in the VLISCO Fashion Fund competition.", image: null },
+  { year: "2026", title: "Citation Award", organisation: "Ghana Outstanding Personality Award", body: "Presented to Marian Gifty Mensah-Dossah for excellence in fashion and lifestyle. Three people on stage presenting the citation on a stage with a LED screen backdrop and a Citation plaque.", image: "award-citation-2026" },
+  { year: "2026", title: "Collective Award", organisation: "Ghana Outstanding Personality Award", body: "Presented to 19 individuals on stage at the Ghana Outstanding Personality Award ceremony. 12 men and 7 women receiving the award.", image: "award-collective-2026" },
+  { year: "2026", title: "Ghana Outstanding Personality — Fashion & Lifestyle", organisation: "Ghana's Most Respected CEOs Awards", body: "Recognised for leadership and influence in Ghana's fashion and lifestyle sector, 2026 presentation.", image: "award-gopa-2026" },
+  { year: "2026", title: "Citation Award (extra)", organisation: "Ghana Outstanding Personality Award", body: "A different photograph from the same Oct 17, 2026 WhatsApp share, showing the same citation presentation.", image: "award-citation-2026-extra" },
 ];
 
 
