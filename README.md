@@ -108,6 +108,7 @@ Almost every word, photograph reference and policy on the site comes from
 | `journey.ts` | The four-step bespoke process, and the testimonial list |
 | `policies.ts` | The twelve official policies, version and last-updated date |
 | `payments.ts` | Published payment methods, Mobile Money and bank details |
+| `faq.ts` | Frequently asked questions, grouped by topic — also feeds FAQ structured data |
 | `privacy.ts` | The privacy notice |
 
 Because these are typed modules, a typo in an image slug or a missing
@@ -120,6 +121,13 @@ photograph fails the build instead of shipping a broken page.
 **Change a policy.** Edit `src/content/policies.ts`, then update `version` and
 `lastUpdated` in the same file. The policies page and the footer both read from
 it.
+
+**Edit an FAQ answer.** `src/content/faq.ts` is grouped by topic and renders on
+`/faq`, in the footer and in the FAQ structured data search engines read. Every
+answer restates a policy, the booking process or a payment rule, so when a term
+changes, change it in `policies.ts` (or `payments.ts`) *and* here — the site must
+never give two versions of the same rule. Do not add lead times, prices or
+services the studio has not confirmed.
 
 **Edit the payment details.** `src/content/payments.ts` holds the Mobile Money
 number, the bank account and the payment rules. The policies page shows them

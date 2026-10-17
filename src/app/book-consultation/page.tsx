@@ -149,7 +149,11 @@ export default async function BookConsultationPage({
                 <Link href="/policies" className="link-editorial text-espresso">
                   booking, consultation and payment policies
                 </Link>{" "}
-                before you submit.
+                before you submit, or see the{" "}
+                <Link href="/faq" className="link-editorial text-espresso">
+                  frequently asked questions
+                </Link>
+                .
               </p>
             </Reveal>
           </div>

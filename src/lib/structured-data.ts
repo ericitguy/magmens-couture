@@ -1,3 +1,4 @@
+import { faqGroups } from "@/content/faq";
 import { brand, contact, siteUrl, socials } from "@/content/site";
 
 /**
@@ -42,6 +43,28 @@ export function businessStructuredData() {
       { "@type": "Place", name: "International clients" },
     ],
     sameAs,
+  };
+}
+
+/**
+ * FAQPage markup, built from the same answers the page renders. Search engines
+ * require the visible answer to match this text, so both read one source.
+ */
+export function faqStructuredData() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${siteUrl}/faq#questions`,
+    mainEntity: faqGroups.flatMap((group) =>
+      group.items.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: [item.answer, item.note].filter(Boolean).join(" "),
+        },
+      })),
+    ),
   };
 }
 

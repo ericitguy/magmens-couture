@@ -149,6 +149,14 @@ export function SiteFooter() {
               </li>
               <li>
                 <Link
+                  href="/faq"
+                  className="link-editorial text-[0.9375rem] text-ivory/80 transition-colors duration-500 ease-editorial hover:text-gold"
+                >
+                  Frequently asked questions
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="link-editorial text-[0.9375rem] text-ivory/80 transition-colors duration-500 ease-editorial hover:text-gold"
                 >

@@ -138,6 +138,7 @@ export const navigation = [
   { label: "Kente & Traditional", href: "/kente-traditional" },
   { label: "Reception & Occasion Wear", href: "/occasion" },
   { label: "Our Story", href: "/our-story" },
+  { label: "FAQ", href: "/faq" },
   { label: "Policies", href: "/policies" },
   { label: "Contact", href: "/contact" },
 ] as const;
