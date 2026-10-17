@@ -237,7 +237,6 @@ export function Gallery({
               width={activeImage.width}
               height={activeImage.height}
               className="max-h-full w-auto max-w-full object-contain"
-              priority
             />
 
             <button
