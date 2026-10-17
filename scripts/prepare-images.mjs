@@ -81,6 +81,7 @@ const SOURCES = [
   { source: "WhatsApp Image 2026-10-17 at 12.19.28.jpeg", slug: "award-citation-2026" },
   { source: "WhatsApp Image 2026-10-17 at 12.19.28 (1).jpeg", slug: "award-collective-2026" },
   { source: "WhatsApp Image 2026-10-17 at 12.19.28 (2).jpeg", slug: "award-gopa-2026" },
+  { source: "WhatsApp Image 2026-10-17 at 12.19.28 (3).jpeg", slug: "award-citation-2026-extra" },
   { source: "reception-fuchsia-lace.png", slug: "reception-fuchsia-beaded-lace" },
   {
     source: "bridal-white-beaded-corset.png",
