@@ -1,0 +1,25 @@
+node_modules/
+.next/
+out/
+build/
+next-env.d.ts
+*.tsbuildinfo
+
+# Local environment — never commit real credentials
+.env
+.env.local
+.env*.local
+
+# Local enquiry store used when no database is configured
+data/
+
+.DS_Store
+
+# Editor / agent workspace metadata
+.freebuff/
+.idea/
+.vscode/
+
+npm-debug.log*
+yarn-error.log*
+.vercel

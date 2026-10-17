@@ -1,0 +1,409 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Magmens Couture — design tokens
+   A restrained luxury palette. Gold is an accent, never a surface.
+   ========================================================================== */
+@theme {
+  --color-ivory: #f7f2ea;
+  --color-porcelain: #fffcf8;
+  --color-espresso: #241a19;
+  --color-gold: #b69a65;
+  --color-rose: #cba9a5;
+  --color-taupe: #a99a8c;
+
+  --font-display: var(--font-cormorant), "Cormorant Garamond", "Times New Roman",
+    serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --tracking-label: 0.28em;
+  --tracking-wordmark: 0.34em;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@layer base {
+  :root {
+    /* Single source of truth for the header's height, so heroes can tuck
+       themselves underneath the transparent navigation. */
+    --header-h: 4.75rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --header-h: 5.25rem;
+    }
+  }
+
+  /* At xl the navigation gains its own row beneath the lockup. */
+  @media (min-width: 1280px) {
+    :root {
+      --header-h: 7.75rem;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    /* Clears the sticky header (7.75rem at xl) when jumping to an anchor. */
+    scroll-padding-top: 8.5rem;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-espresso);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.005em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-gold) 30%, transparent);
+    color: var(--color-espresso);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  /* Espresso sections invert focus and selection for contrast. */
+  .on-dark :focus-visible {
+    outline-color: var(--color-gold);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ==========================================================================
+   Editorial typography
+   ========================================================================== */
+@layer components {
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--color-taupe);
+  }
+
+  .eyebrow-on-dark {
+    color: color-mix(in srgb, var(--color-ivory) 70%, transparent);
+  }
+
+  .display-hero {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5.1vw, 4.25rem);
+    line-height: 1.04;
+    font-weight: 300;
+  }
+
+  .display-1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 4.4vw, 3.5rem);
+    line-height: 1.08;
+    font-weight: 300;
+  }
+
+  .display-2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.65rem, 3vw, 2.5rem);
+    line-height: 1.14;
+    font-weight: 300;
+  }
+
+  .display-3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.25rem, 1.9vw, 1.6rem);
+    line-height: 1.28;
+    font-weight: 400;
+  }
+
+  .lead {
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    line-height: 1.75;
+    color: color-mix(in srgb, var(--color-espresso) 78%, transparent);
+  }
+
+  .lead-on-dark {
+    color: color-mix(in srgb, var(--color-ivory) 78%, transparent);
+  }
+
+  .body-copy {
+    color: color-mix(in srgb, var(--color-espresso) 80%, transparent);
+    line-height: 1.8;
+  }
+
+  .body-copy-on-dark {
+    color: color-mix(in srgb, var(--color-ivory) 76%, transparent);
+    line-height: 1.8;
+  }
+
+  .measure {
+    max-width: 62ch;
+  }
+
+  .measure-tight {
+    max-width: 46ch;
+  }
+
+  /* A hairline gold rule used to separate editorial blocks. */
+  /* Lets a full-bleed hero start behind the transparent header. */
+  .under-header {
+    margin-top: calc(-1 * var(--header-h));
+  }
+
+  .hairline {
+    height: 1px;
+    background-color: color-mix(in srgb, var(--color-gold) 45%, transparent);
+    border: 0;
+  }
+
+  .hairline-faint {
+    height: 1px;
+    background-color: color-mix(in srgb, var(--color-gold) 22%, transparent);
+    border: 0;
+  }
+
+  /* Understated link with an animating baseline. */
+  .link-editorial {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-editorial::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms var(--ease-editorial);
+  }
+
+  .link-editorial:hover::after,
+  .link-editorial:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+/* ==========================================================================
+   Scroll reveals
+   ========================================================================== */
+/* `@media (scripting: enabled)` gates the hidden state on JavaScript being
+   available to reveal it again, so a visitor without scripting sees every
+   section. Browsers that do not understand the feature ignore the block, which
+   is the same safe outcome. */
+@media (scripting: enabled) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 900ms var(--ease-editorial),
+      transform 900ms var(--ease-editorial);
+    will-change: opacity, transform;
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+@utility shell {
+  width: 100%;
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 1.375rem;
+}
+
+@media (min-width: 768px) {
+  .shell {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .shell {
+    padding-inline: 4rem;
+  }
+}
+
+@utility shell-narrow {
+  width: 100%;
+  max-width: 62rem;
+  margin-inline: auto;
+  padding-inline: 1.375rem;
+}
+
+@media (min-width: 768px) {
+  .shell-narrow {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+@layer components {
+  .field-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: color-mix(in srgb, var(--color-espresso) 70%, transparent);
+    margin-bottom: 0.5rem;
+  }
+
+  .field-input {
+    width: 100%;
+    background-color: var(--color-porcelain);
+    border: 1px solid color-mix(in srgb, var(--color-taupe) 40%, transparent);
+    border-radius: 2px;
+    padding: 0.8rem 0.9rem;
+    font-size: 0.9375rem;
+    color: var(--color-espresso);
+    transition:
+      border-color 300ms var(--ease-editorial),
+      background-color 300ms var(--ease-editorial);
+  }
+
+  .field-input::placeholder {
+    color: color-mix(in srgb, var(--color-taupe) 85%, transparent);
+  }
+
+  .field-input:hover {
+    border-color: color-mix(in srgb, var(--color-gold) 60%, transparent);
+  }
+
+  .field-input:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-gold) 18%, transparent);
+  }
+
+  .field-input[aria-invalid="true"] {
+    border-color: #9c4234;
+  }
+
+  .field-error {
+    margin-top: 0.4rem;
+    font-size: 0.8125rem;
+    color: #8f3a2d;
+  }
+
+  select.field-input {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-taupe) 50%),
+      linear-gradient(135deg, var(--color-taupe) 50%, transparent 50%);
+    background-position:
+      calc(100% - 20px) calc(50% + 2px),
+      calc(100% - 14px) calc(50% + 2px);
+    background-size:
+      6px 6px,
+      6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   Policies accordion — native <details> for keyboard and no-JS support
+   ========================================================================== */
+@layer components {
+  .policy-summary {
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .policy-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .policy-marker {
+    transition: transform 400ms var(--ease-editorial);
+  }
+
+  details[open] .policy-marker {
+    transform: rotate(90deg);
+  }
+}
+
+/* ==========================================================================
+   Print — a clean, ink-friendly policy and booking record
+   ========================================================================== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  /* Every policy section prints in full, whether or not it was expanded on
+     screen, and the disclosure marker is dropped. */
+  details > * {
+    display: block !important;
+  }
+
+  .policy-marker {
+    display: none !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    color: #444;
+  }
+}

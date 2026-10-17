@@ -1,0 +1,14 @@
+# Files kept in the repository but not needed in a deployment.
+.env
+.env.local
+.env*.local
+node_modules
+.next
+data
+.DS_Store
+*.tsbuildinfo
+
+# The 18 MB of original photography is only used locally, by `npm run images`.
+# The build reads the already-generated files in public/, so uploading the
+# originals to every deployment would just slow the build down.
+photos

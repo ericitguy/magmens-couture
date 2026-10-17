@@ -1,0 +1,88 @@
+{
+  "bridal-ivory-ballgown-blossom": {
+    "slug": "bridal-ivory-ballgown-blossom",
+    "file": "/photography/bridal-ivory-ballgown-blossom.webp",
+    "width": 1600,
+    "height": 2400,
+    "aspectRatio": 0.6667,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAACQBgCdASoYACQAPu1aqk4ppKQiMBqqqTAdiWMAuOQWXHvSQqJ/kciLRqEj6qdM18gONYz3OZ7nfG5LX6cAAP7x3DIu4Q2zH7UkJcAgvkyWvRJNL0q58rS4sKT5xJGnH+PXDGvzAK2S8cGZIEIBYWhMtkDKOIv+ka29Slk6soW9fmU0cnu9tygXprVyj4/vF0dLMBrxBbqS3TG75OW9jhBfIVHklv3zrZS6CnYiKMIdUcilvowa0Nch53onMJgBECN1FGBpq3BKcCieA6ZsqIPffyj3gDOsm91TKgOhd5r83Mw2cM8AfTEheY8dUA5Atpw5VPuxaYU97l/7E9Fxrpd/H2JYcENWe9ElsAAA",
+    "removedLetterbox": null
+  },
+  "bridal-ivory-ballgown-full": {
+    "slug": "bridal-ivory-ballgown-full",
+    "file": "/photography/bridal-ivory-ballgown-full.webp",
+    "width": 1713,
+    "height": 2400,
+    "aspectRatio": 0.7137,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAADwBQCdASoYACIAPulipk2pJaOiNVgIASAdCWMAx2wWbP/f+PJd2eH8O8Mo2A49L7iPA1CrZ/7oAAD+54giJmgpH306LDx2glzb96bGEAQ9rkLEN28L0IjFJfAutnrlcqnPRZJNaQkGDHlZ8vaGYskkJmRCXdFJ1sM6mf4tGTVuUdLX6zL0Wlvxll0rpydR/8ICDCKmAx2I+Dq4iJ0q2lxyDU10X+ZRhh5PpooRKg8A2NTYScyp40tjvVpz9BlkCVfMOoQdhw3NXjsgNHhNmfVJ2NKLMn61DPIAAA==",
+    "removedLetterbox": null
+  },
+  "bridal-ivory-ballgown-train": {
+    "slug": "bridal-ivory-ballgown-train",
+    "file": "/photography/bridal-ivory-ballgown-train.webp",
+    "width": 1928,
+    "height": 2400,
+    "aspectRatio": 0.8033,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoYAB4APu1kqk2ppaQiMAgBMB2JZQDHMBwwUQHOWaPIDy0rNJf6czUJz8kAq8IAAPsjDqQjU1M6GEk4PRGEfuxutCSkiUcLnw4+OYkmnvvKkG8VYEyiojzwDdUyQAFv1QNciHCGj+pXfrmxy6sRSUmLI7hiCqUJ2M84n4+z8/TuczFhgbdjNv7xaIWEMsEp0x5ZnVLW+a6AWxCk298SzgOu/3iP2m0/QQw5GLt2JGLwNqF6ARtqOeql7RMMeLCPYwAAAA==",
+    "removedLetterbox": null
+  },
+  "bridal-ivory-ballgown-portrait": {
+    "slug": "bridal-ivory-ballgown-portrait",
+    "file": "/photography/bridal-ivory-ballgown-portrait.webp",
+    "width": 1600,
+    "height": 2400,
+    "aspectRatio": 0.6667,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRgYBAABXRUJQVlA4IPoAAADwBQCdASoYACQAPu1mqlCppSOiqrgMATAdiWUAwCgh0i7NkWkZqLOHcHxDwNBd8r6tic3cFoFaAAD+8rTxt4lvbKUqIyJTCsYUynfZc8qm8Xqv1/naZzO+vhxosb1x+7hysVBqlvuoLljlGBjC1kzQga5suLkjp+9oiUyHnaUKLp1kCJ2QiSUWKAGmgq3MFoOIG+16ZipP3HuuIGRom3Ax/RddXiey793UuqIiHU+eBOWXPsCV+RqG08OsSB50C8yUXysaGV2OZZKJegXOEYi9EwXVreZ5Q3y9L2pOBcWVPZy1+zMGH4IpptxNsCiKmvMBqYZx4n+AAAAA",
+    "removedLetterbox": null
+  },
+  "bridal-beaded-mermaid-long-sleeve": {
+    "slug": "bridal-beaded-mermaid-long-sleeve",
+    "file": "/photography/bridal-beaded-mermaid-long-sleeve.webp",
+    "width": 1125,
+    "height": 2000,
+    "aspectRatio": 0.5625,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRmQBAABXRUJQVlA4IFgBAAAwBwCdASoYACsAPu1sr1GppaQipWsxMB2JZACxHu1l2BxVCFTGTOoXPnKLJ8I+AiRpmjV9dJymROydEa2P+wX1eIAA/u5WSnxt8cEHnGl8WVqQ5ENocBa71Jvfqz6EAiFYFx0xRGp5iZW5O57N1P4Fijsd7et1+DclSb5AyVNCVsO8fwA0Oi7Bdqmh4SYTf+hdfgzFyHxDKEChQ0tFt01+dLQrooMHZJZv9qHoky+w5aMGdLy0fJu44dMiOCqWJR2zt04QVb0uiXVdEVHf+aApxjPZhOgEr34xK/8zv98zQOMfQpkz+EmZqlzlo2qeFBQUJds8u3yAW6y94XTCIAtOpCdeQbgyXC38ZzZbHdL0ti5cmG/AUjcvBpv02dDT157OH2yuzo5SY/EAFQRLshz2G1JB2B+X1ooAG724lLt+K84MXn1nSgAyuCnKBduVU/eaV/HorcAAAA==",
+    "removedLetterbox": {
+      "top": 218,
+      "bottom": 218
+    }
+  },
+  "traditional-amber-lace-train": {
+    "slug": "traditional-amber-lace-train",
+    "file": "/photography/traditional-amber-lace-train.webp",
+    "width": 1024,
+    "height": 1536,
+    "aspectRatio": 0.6667,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRjABAABXRUJQVlA4ICQBAADQBwCdASoYACQAPu1mqVEppSOiqrgMATAdiWwAtRtQxEd48TH/mC4K3nOLuvKddwNVeTjoVYJVNPafevtOE70J5B56pwxaAAD7Id5db90cmJ4dfFVauK4pJ8W1tW9M2fnJIOdE4J/qASj8s+IPjU3WZKDAHgHfbqEURZ/ud+ssh5oe3H5NLZzsQ5Cw+eN9C/EZ1HXp+k1pl0DVn4uLS350482oxNVLDH/VOklsgnSrlSFueddwFynrcHCrcQ1MyP4xPQfaIM4Iy1J2qjllNUMRDwxeoBGbpHeqfibjVVXrZTY3qI5gxTgElbM397y2OHg+nAcUlRLjVU+REmzwtGWLvfe1ZFrurERDmmwjQpesLLXL7BfpM32U4i9ps75Z6DwVYAAA",
+    "removedLetterbox": null
+  },
+  "traditional-royal-beaded-corset": {
+    "slug": "traditional-royal-beaded-corset",
+    "file": "/photography/traditional-royal-beaded-corset.webp",
+    "width": 853,
+    "height": 1280,
+    "aspectRatio": 0.6664,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRvQAAABXRUJQVlA4IOgAAACQBgCdASoYACQAPu1kq06ppaQiKqwBMB2JQBOmWFBF8YA3Rpwl6t7i03EpfJoKXsb2FpMcr0TRGjp2HuQAAP7oypSBazOwt89lZb7DshEwbeV1bzXWpbDzrSyC09vmKfBLZCOayF7Vc2EOoRN/DohLOhcFiLGOs85SXOXH/ZfELkJBRYX7If+tJwC37oI83l3fjzLdl+xUg4VC4JL8Kcm/d2CyCZ/ZD7ihWedCSi9BAmyMR+ef5CUEuEjm/MDbBR6GEQcPDxKf9du8nzdkqlbpjtFeiDRC9G4cMUer2AFyf6N9zoc1CpAA",
+    "removedLetterbox": null
+  },
+  "atelier-mermaid-mannequin": {
+    "slug": "atelier-mermaid-mannequin",
+    "file": "/photography/atelier-mermaid-mannequin.webp",
+    "width": 1125,
+    "height": 1515,
+    "aspectRatio": 0.7426,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAACwBQCdASoYACAAPu1ur1KppiQiqAgBMB2JZAC3uA3vK1pJF664jQOlMc8iIPtyAWMuAN16m4AA/gf5DoUDEuSwCS1kBKfw8NaFBY/wtfrerXvJ+olWBYzjRu4OmfopiFUiu7aPv4U0p++cL+fVKihqNLMkD237+C7EJeZU8/5iGhrUkV50r3kBdgOSsa6TY6jCtxAjiFIV3oGp9O2FxE8SJ5VReS4edDX+sEelAkk8FZjQpS9SrcEuyqMk7OfnZKXdDArMHhgWGjUBcsFkbh9kpcqDuTG1W/PJtAFZlTbn06EXh/n097fxl4AAAA==",
+    "removedLetterbox": {
+      "top": 5,
+      "bottom": 2
+    }
+  }
+}
