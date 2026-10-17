@@ -236,6 +236,7 @@ export function Gallery({
               blurDataURL={activeImage.blurDataURL}
               width={activeImage.width}
               height={activeImage.height}
+              loading="eager"
               className="max-h-full w-auto max-w-full object-contain"
             />
 

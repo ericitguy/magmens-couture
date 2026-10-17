@@ -188,6 +188,16 @@
     "blurDataURL": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAAAwBQCdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoLUC7AFUCgA9ziLNq/ZN7SUKJFQAADeVtBcgil3R9ff1Ry9dDxGw1bbqSQX1hANNxgVVuhngl9zN2MlzdvemVg6+NWkrO8PkWdxeIfdLQYkhu3Y+FC80nnS8850REAiZPEnt2hFOooj6+KCu6x9fd84Kxl7eSdHaRnbc7Yn2cPysJMMvtYMxiuAt3vS9DEK7VKXRZ3GZIEmtPm13zDIWSFRRJ8TbaA1LmMxH0BowP4SQii4/U9L9byz18zXz/GBbQAAAA==",
     "removedLetterbox": null
   },
+  "award-citation-2026-extra": {
+    "slug": "award-citation-2026-extra",
+    "file": "/photography/award-citation-2026-extra.webp",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5004,
+    "orientation": "landscape",
+    "blurDataURL": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAADQBACdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoMYLIAKgEQnPV7TYg/7dw5WQAD+chCkYa0rtnrdXSOHZoz1Ru/F7uwsTAD4HY9e0OkyMYaXv94MHMK3FzT0JP8CTO9KfZGTie4ECd9ZBJCcOXHMBxU6LTFJ3ti3O6KFCfL2vCIlmM6stJBp7j7H2qBlPQn9NPaP8eAb0ssf5igIEW6rCjPwcyMyE8a8pDub7mIw9RrF888VKjqQm620sX4Qggf3BjAAAAA=",
+    "removedLetterbox": null
+  },
   "reception-fuchsia-beaded-lace": {
     "slug": "reception-fuchsia-beaded-lace",
     "file": "/photography/reception-fuchsia-beaded-lace.webp",
