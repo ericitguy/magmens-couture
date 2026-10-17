@@ -97,6 +97,13 @@ export default async function BookConsultationPage({
                   </dd>
                 </div>
                 <div>
+                  <dt className="eyebrow">Consultation fee</dt>
+                  <dd className="mt-2 text-[0.9375rem] leading-relaxed text-espresso/85">
+                    GHS 500, non-refundable, deducted from the final cost of your
+                    commission. Up to two guests may accompany you.
+                  </dd>
+                </div>
+                <div>
                   <dt className="eyebrow">International clients</dt>
                   <dd className="mt-2 text-[0.9375rem] leading-relaxed text-espresso/85">
                     Virtual consultations and guided measurement calls are
@@ -136,8 +143,9 @@ export default async function BookConsultationPage({
               />
 
               <p className="mt-10 text-[0.8125rem] leading-relaxed text-taupe">
-                A non-refundable consultation fee applies and is separate from
-                garment production costs. Read the{" "}
+                A non-refundable consultation fee of GHS 500 secures a session.
+                It is separate from the cost of production but forms part of the
+                total, and is deducted from the final amount. Read the{" "}
                 <Link href="/policies" className="link-editorial text-espresso">
                   booking, consultation and payment policies
                 </Link>{" "}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AppointmentCta } from "@/components/sections/AppointmentCta";
+import { PaymentMethods } from "@/components/sections/PaymentMethods";
 import { Container, Section } from "@/components/ui/Container";
 import { PrintButton } from "@/components/ui/PrintButton";
 import { Reveal } from "@/components/ui/Reveal";
@@ -169,6 +170,8 @@ export default function PoliciesPage() {
                           </ul>
                         </div>
                       ))}
+
+                      {section.id === "payment" ? <PaymentMethods /> : null}
 
                       {section.note ? (
                         <div className="mt-6 border-l-2 border-gold/60 bg-porcelain p-5 text-[0.875rem] leading-relaxed text-espresso/85">

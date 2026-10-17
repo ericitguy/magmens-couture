@@ -49,6 +49,33 @@ const SOURCES = [
     source: "WhatsApp Image 2026-10-16 at 20.49.50.jpeg",
     slug: "atelier-mermaid-mannequin",
   },
+  // Studio photography added October 2026.
+  { source: "reception-red-sequin.jpg", slug: "reception-red-sequin-ruffle" },
+  {
+    source: "traditional-copper-kente-bust.png",
+    slug: "traditional-copper-beaded-kente",
+  },
+  {
+    source: "traditional-kente-corset-train.png",
+    slug: "traditional-kente-corset-train",
+  },
+  {
+    source: "traditional-green-kente-corset.png",
+    slug: "traditional-green-kente-corset",
+  },
+  {
+    source: "traditional-kente-beaded-fishtail.png",
+    slug: "traditional-kente-beaded-fishtail",
+  },
+  {
+    source: "atelier-kente-beaded-mannequin.png",
+    slug: "atelier-kente-beaded-mannequin",
+  },
+  { source: "reception-fuchsia-lace.png", slug: "reception-fuchsia-beaded-lace" },
+  {
+    source: "bridal-white-beaded-corset.png",
+    slug: "bridal-white-beaded-corset",
+  },
 ];
 
 /**

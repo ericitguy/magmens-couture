@@ -63,6 +63,74 @@ export const milestones: Milestone[] = [
   },
 ];
 
+export type Award = {
+  year: string;
+  title: string;
+  organisation: string;
+  body: string;
+};
+
+/**
+ * Awards and recognitions, as supplied by the studio. Listed newest first so
+ * the most recent recognition leads the section.
+ */
+export const awards: Award[] = [
+  {
+    year: "2026",
+    title: "Triumph Fashion Icon of the Year",
+    organisation: "Triumph Women Awards",
+    body: "Mrs. Marian Gifty Mensah was recognised as Triumph Fashion Icon of the Year, celebrating excellence, leadership and impact.",
+  },
+  {
+    year: "2025",
+    title: "Excellence in Detailed Haute Couture",
+    organisation: "Ashanti Business Merit Awards",
+    body: "Recognised for the standard of construction and finishing that defines the house's couture work.",
+  },
+  {
+    year: "2025",
+    title: "Global Woman Fashion Entrepreneur of the Year",
+    organisation: "2nd Global SHE Achievers Conference & Awards, Banjul, The Gambia",
+    body: "Awarded for her contribution to fashion entrepreneurship and women's empowerment.",
+  },
+  {
+    year: "2024",
+    title: "Ghana's Outstanding Personality — Fashion & Lifestyle",
+    organisation: "Ghana's Most Respected CEOs Awards",
+    body: "Recognised for leadership and influence in Ghana's fashion and lifestyle sector.",
+  },
+  {
+    year: "2024",
+    title: "Ghana's Most Respected CEO in Fashion & Lifestyle Services",
+    organisation: "7th Ghana's Most Respected CEOs Awards, Business Executive Group",
+    body: "Awarded at the seventh edition of the Ghana's Most Respected CEOs Awards.",
+  },
+  {
+    year: "2020 & 2021",
+    title: "Forty Under 40 Awards — Fashion Category Nominee",
+    organisation: "Forty Under 40 Awards",
+    body: "Named among the country's leading young fashion entrepreneurs in two consecutive years.",
+  },
+  {
+    year: "2019",
+    title: "Fashion Excellence Award",
+    organisation: "Bryte Africa Fashion Week",
+    body: "Received for excellence in fashion design.",
+  },
+  {
+    year: "2017",
+    title: "Finalist, VLISCO Fashion Fund Competition",
+    organisation: "VLISCO Fashion Fund",
+    body: "Recognised as a finalist in the VLISCO Fashion Fund competition.",
+  },
+  {
+    year: "2016",
+    title: "Winner, Fashion Guru Sewing Bee",
+    organisation: "Joy Prime TV",
+    body: "Crowned champion of the maiden edition of the Fashion Guru Sewing Bee.",
+  },
+];
+
 /**
  * Pull quotes. These are drawn from the studio's supplied brand copy — the
  * studio's own words about its craft — rather than statements attributed to

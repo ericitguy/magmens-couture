@@ -1,17 +1,19 @@
+import Image from "next/image";
+
 type MonogramPlateProps = {
-  initials: string;
   caption?: string;
   className?: string;
 };
 
 /**
- * An elegant placeholder shown where a portrait is still to be supplied.
- * Deliberately typographic: it reads as an intentional part of the design
- * rather than as a missing image, and it is replaced automatically as soon as
- * a photograph is added to the content module.
+ * The studio's brand plate, shown where a photograph has not been supplied.
+ *
+ * It uses the studio's own monogram artwork as an intentional part of the
+ * design — a printed calling card on espresso — rather than a placeholder that
+ * reads as a missing image. It is replaced automatically as soon as a portrait
+ * is added to the founder content.
  */
 export function MonogramPlate({
-  initials,
   caption,
   className = "",
 }: MonogramPlateProps) {
@@ -26,9 +28,14 @@ export function MonogramPlate({
           aria-hidden="true"
           className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,rgba(182,154,101,0.16),transparent_65%)]"
         />
-        <span className="relative font-display text-[3.25rem] leading-none tracking-[0.24em] text-gold md:text-[4rem]">
-          {initials}
-        </span>
+        <Image
+          src="/brand/magmens-monogram.png"
+          alt=""
+          width={640}
+          height={640}
+          sizes="(min-width: 1024px) 30vw, 70vw"
+          className="relative w-[68%] max-w-72 shadow-[0_18px_50px_-24px_rgba(0,0,0,0.7)]"
+        />
       </div>
       {caption ? (
         <figcaption className="mt-3 text-[0.75rem] leading-relaxed text-taupe">

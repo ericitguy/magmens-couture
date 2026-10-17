@@ -1,4 +1,5 @@
 import type { NewEnquiry } from "@/lib/enquiries";
+import { buildCalendar, calendarEvents } from "@/lib/calendar";
 
 /**
  * Studio notifications.
@@ -75,15 +76,29 @@ export async function notifyStudio(
       ? `New consultation request — ${enquiry.name}`
       : `New website enquiry — ${enquiry.name}`;
 
-  const attachments =
-    enquiry.image?.data && enquiry.image.bytes <= 4 * 1024 * 1024
-      ? [
-          {
-            filename: enquiry.image.filename,
-            content: enquiry.image.data,
-          },
-        ]
-      : undefined;
+  const attachments: Array<{ filename: string; content: string }> = [];
+
+  if (enquiry.image?.data && enquiry.image.bytes <= 4 * 1024 * 1024) {
+    attachments.push({
+      filename: enquiry.image.filename,
+      content: enquiry.image.data,
+    });
+  }
+
+  // A calendar invitation travels with the alert, so the studio can add the
+  // requested slot to its calendar straight from the email — and the client
+  // gets the same file from their confirmation screen.
+  const events = calendarEvents({ ...enquiry, id: enquiryId });
+  if (events.length > 0) {
+    attachments.push({
+      filename: "magmens-consultation.ics",
+      content: Buffer.from(
+        buildCalendar(events, {
+          calendarName: `Consultation request — ${enquiry.name}`,
+        }),
+      ).toString("base64"),
+    });
+  }
 
   try {
     const response = await fetch("https://api.resend.com/emails", {
@@ -98,7 +113,7 @@ export async function notifyStudio(
         reply_to: enquiry.email,
         subject,
         text: `Reference: ${enquiryId}\n\n${summarise(enquiry)}\n\nSubmitted through the Magmens Couture website.`,
-        ...(attachments ? { attachments } : {}),
+        ...(attachments.length > 0 ? { attachments } : {}),
       }),
     });
 

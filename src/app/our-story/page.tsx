@@ -10,7 +10,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getGalleryItem } from "@/content/gallery";
 import { brand } from "@/content/site";
-import { craftQuotes, founder, milestones } from "@/content/story";
+import { awards, craftQuotes, founder, milestones } from "@/content/story";
 import { socialImage } from "@/lib/social-image";
 
 export const metadata: Metadata = {
@@ -66,7 +66,7 @@ export default function OurStoryPage() {
                 </figure>
               ) : (
                 <figure className="lg:sticky lg:top-32">
-                  <MonogramPlate initials="M" />
+                  <MonogramPlate />
                   <figcaption className="mt-4 font-display text-[1.05rem]">
                     {founder.name}
                     <span className="mt-1 block font-sans text-[0.6875rem] uppercase tracking-[0.22em] text-taupe">
@@ -153,8 +153,48 @@ export default function OurStoryPage() {
         </Container>
       </Section>
 
+      {/* Awards and recognitions */}
+      <Section tone="ivory" labelledBy="awards-heading">
+        <Container>
+          <SectionHeading
+            headingId="awards-heading"
+            eyebrow="Awards & Recognitions"
+            title="Recognised in Ghana and beyond."
+            intro="A decade of work, acknowledged from Accra to Banjul — for design, for craftsmanship, and for building a fashion business that creates opportunity for others."
+          />
+
+          <ol className="mt-14 grid gap-px border border-gold/25 bg-gold/25 sm:grid-cols-2">
+            {awards.map((award, index) => (
+              <Reveal
+                key={`${award.year}-${award.title}`}
+                as="li"
+                delay={index * 60}
+                className="flex flex-col bg-ivory p-6 md:p-8"
+              >
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="font-display text-[1.05rem] tracking-[0.12em] text-gold">
+                    {award.year}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="text-[0.75rem] text-gold/60"
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="display-3 mt-4">{award.title}</h3>
+                <p className="mt-3 text-[0.6875rem] uppercase leading-relaxed tracking-[0.18em] text-taupe">
+                  {award.organisation}
+                </p>
+                <p className="body-copy mt-4 text-[0.9375rem]">{award.body}</p>
+              </Reveal>
+            ))}
+          </ol>
+        </Container>
+      </Section>
+
       {/* The atelier */}
-      <Section tone="ivory" labelledBy="atelier-heading">
+      <Section tone="porcelain" labelledBy="atelier-heading">
         <Container>
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
             <Reveal className="lg:col-span-5">

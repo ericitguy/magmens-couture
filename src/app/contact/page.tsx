@@ -76,6 +76,18 @@ export default function ContactPage() {
                   </dd>
                 </div>
 
+                <div>
+                  <dt className="eyebrow">Email</dt>
+                  <dd className="mt-2 text-[0.9375rem] text-espresso/85">
+                    <a
+                      href={`mailto:${contact.email}`}
+                      className="link-editorial break-all"
+                    >
+                      {contact.email}
+                    </a>
+                  </dd>
+                </div>
+
                 {contact.hours ? (
                   <div>
                     <dt className="eyebrow">Studio hours</dt>
@@ -129,12 +141,13 @@ export default function ContactPage() {
               </div>
 
               <p className="mt-8 text-[0.8125rem] leading-relaxed text-taupe">
-                No studio email address is published. Messages sent with this
-                form are delivered to the studio directly and handled under the{" "}
+                Messages sent with this form are delivered to the studio
+                directly and handled under the{" "}
                 <Link href="/privacy" className="link-editorial text-espresso">
                   privacy notice
                 </Link>
-                .
+                . Written enquiries may also be sent to the studio&rsquo;s email
+                address above.
               </p>
             </Reveal>
 

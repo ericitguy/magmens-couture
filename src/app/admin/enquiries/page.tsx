@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { timingSafeEqual } from "node:crypto";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { listEnquiries, storageBackend } from "@/lib/enquiries";
@@ -35,6 +36,8 @@ export default async function EnquiriesAdminPage({ searchParams }: AdminProps) {
   const enquiries = await listEnquiries(100);
   const backend = storageBackend();
   const emailConfigured = notificationsConfigured();
+  const feedToken = process.env.CALENDAR_FEED_TOKEN?.trim();
+  const feedUrl = feedToken ? await calendarFeedUrl(feedToken) : null;
 
   return (
     <section className="bg-ivory pb-24 pt-32">
@@ -61,6 +64,44 @@ export default async function EnquiriesAdminPage({ searchParams }: AdminProps) {
             </dd>
           </div>
         </dl>
+
+        <div className="mt-10 border border-gold/30 bg-porcelain p-6 md:p-8">
+          <p className="eyebrow">Calendar</p>
+          <h2 className="display-3 mt-3">
+            Every request in one subscribeable calendar
+          </h2>
+          {feedUrl ? (
+            <>
+              <p className="mt-4 max-w-2xl text-[0.875rem] leading-relaxed text-espresso/85">
+                Add this address once in Google Calendar (Other calendars →
+                From URL), Apple Calendar (File → New Calendar Subscription) or
+                Outlook (Add calendar → Subscribe from web). Each new
+                consultation request then appears automatically, marked
+                tentative until you confirm it.
+              </p>
+              <p className="mt-4 break-all border border-gold/25 bg-ivory p-3 font-mono text-[0.75rem] text-espresso/80">
+                {feedUrl}
+              </p>
+              <a
+                href={feedUrl}
+                className="link-editorial mt-4 inline-flex text-[0.6875rem] font-medium uppercase tracking-[0.2em]"
+              >
+                Open the calendar feed
+              </a>
+              <p className="mt-4 text-[0.75rem] leading-relaxed text-taupe">
+                Anyone holding this link can read the bookings, so keep it
+                private and rotate <code>CALENDAR_FEED_TOKEN</code> if it is
+                shared by accident.
+              </p>
+            </>
+          ) : (
+            <p className="mt-4 max-w-2xl text-[0.875rem] leading-relaxed text-espresso/85">
+              Set <code>CALENDAR_FEED_TOKEN</code> to a long random value
+              (<code>openssl rand -hex 32</code>) to publish a private calendar
+              of requests that you can subscribe to from your own calendar app.
+            </p>
+          )}
+        </div>
 
         {!emailConfigured ? (
           <p className="mt-8 border-l-2 border-gold/60 bg-porcelain p-5 text-[0.875rem] leading-relaxed text-espresso/85">
@@ -171,6 +212,15 @@ function formatDate(value: string): string {
     dateStyle: "medium",
     timeStyle: "short",
   });
+}
+
+/** Absolute feed address for the current host, so it works locally and live. */
+async function calendarFeedUrl(token: string): Promise<string> {
+  const requestHeaders = await headers();
+  const host =
+    requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host") ?? "";
+  const protocol = requestHeaders.get("x-forwarded-proto") ?? "http";
+  return `${protocol}://${host}/api/calendar/feed?token=${encodeURIComponent(token)}`;
 }
 
 /** Constant-time comparison so the token cannot be probed character by character. */

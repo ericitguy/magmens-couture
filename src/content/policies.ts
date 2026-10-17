@@ -8,8 +8,8 @@
  */
 
 export const policiesMeta = {
-  version: "1.0",
-  lastUpdated: "16 October 2026",
+  version: "1.1",
+  lastUpdated: "17 October 2026",
   intro:
     "These are the stated terms under which Magmens Couture accepts consultations, orders, production and collection. Please read them before booking, as they set out what the studio requires and what clients can expect.",
   closing:
@@ -55,8 +55,8 @@ export const policySections: PolicySection[] = [
       {
         items: [
           "Consultations may be conducted in person or virtually.",
-          "A non-refundable consultation fee is required to secure a consultation.",
-          "The consultation fee is separate from garment production costs.",
+          "A non-refundable consultation fee of GHS 500 is required to secure any consultation session.",
+          "The consultation fee is separate from the cost of production. It forms part of the total cost of the commission and is deductible from the final amount.",
           "A maximum of two guests may accompany a client.",
           "The bride and relevant decision-makers are encouraged to attend.",
           "When a client consults solely through a third party, Magmens Couture is not responsible for misunderstandings or discrepancies arising from information communicated by that third party.",
@@ -87,26 +87,24 @@ export const policySections: PolicySection[] = [
     lists: [
       {
         items: [
-          "A minimum 70% non-refundable deposit is required to commence production.",
-          "The outstanding balance must be paid before collection or delivery.",
-          "Payments must reference the client's full name.",
+          "A minimum deposit of 70% is required to commence production. The deposit is non-refundable.",
+          "The full balance must be paid before collection or delivery of any outfit.",
+          "Payments may be made by Mobile Money or bank transfer.",
+          "All payments must be referenced with the client's full name so they can be tracked.",
           "No outfit will be released without full payment.",
         ],
       },
-      {
-        label: "Accepted payment methods:",
-        items: ["Mobile Money", "Bank transfer"],
-      },
     ],
-    note: "Account details are issued by the studio to confirmed clients only. Magmens Couture never publishes payment account details online.",
+    note: "The studio's payment details are published below so that no client is sent invented account numbers by a third party. Pay only into the accounts named there, and confirm on +233 24 830 4463 if you are ever given different details.",
   },
   {
     id: "no-refund",
     number: "5",
     title: "No Refund Policy",
     paragraphs: [
-      "Payments, deposits, consultation fees and progress payments are stated by Magmens Couture to be non-refundable.",
-      "Once production has commenced, the studio's policy states that refunds will not be issued.",
+      "All payments made to Magmens Couture are non-refundable.",
+      "Once garment production has commenced, no refunds will be issued under any circumstances.",
+      "Deposits, consultation fees and progress payments are strictly non-refundable.",
     ],
     note: "This policy is subject to applicable Ghanaian consumer protection law and other mandatory legal requirements.",
   },
@@ -114,19 +112,19 @@ export const policySections: PolicySection[] = [
     id: "fittings",
     number: "6",
     title: "Fittings Policy",
-    paragraphs: ["Up to three fittings are provided:"],
+    paragraphs: ["Magmens Couture provides up to three fittings:"],
     lists: [
       {
         items: [
-          "Initial fitting.",
-          "Mid-production fitting.",
-          "Final fitting.",
+          "Initial fit.",
+          "Mid-production fit.",
+          "Final fit.",
         ],
       },
       {
         items: [
-          "Clients are expected to attend scheduled fittings.",
-          "Fittings should be completed 2–4 weeks before the event date.",
+          "Clients must attend all scheduled fittings.",
+          "Fittings should be completed at least 2–4 weeks before the event date.",
           "Clients who cannot attend in person may be offered a test-fit service or additional allowance for future alterations, where applicable.",
         ],
       },
@@ -187,9 +185,9 @@ export const policySections: PolicySection[] = [
       {
         items: [
           "Full payment must be completed before collection.",
-          "Delivery and shipping costs are borne by the client and are not included in garment pricing.",
-          "Local and international shipping fees are separate.",
-          "Outfits not collected within 14 days of completion may attract storage fees.",
+          "Delivery costs are borne by the client.",
+          "Shipping fees, local or international, are not included in garment pricing.",
+          "Outfits not collected within 14 days of completion will attract storage fees.",
         ],
       },
     ],

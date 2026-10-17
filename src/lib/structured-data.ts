@@ -22,6 +22,7 @@ export function businessStructuredData() {
     slogan: brand.tagline,
     url: siteUrl,
     telephone: contact.phoneE164,
+    email: contact.email,
     foundingDate: String(brand.established),
     founder: {
       "@type": "Person",

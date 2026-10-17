@@ -6,10 +6,10 @@ import { MonogramPlate } from "@/components/ui/MonogramPlate";
 import { founder } from "@/content/story";
 
 const highlights = [
-  "From Obuasi to the founding of Magmens Couture in 2015",
-  "A house built on luxury bridal and high-fashion couture",
-  "A commitment to women's empowerment and professional development",
-  "Collaboration with universities and aspiring fashion professionals",
+  "Founded in Obuasi in 2015 — a house built on bridal and high-fashion couture",
+  "Ghana's Most Respected CEO in Fashion & Lifestyle Services, 2024",
+  "Triumph Fashion Icon of the Year, 2026",
+  "Global Woman Fashion Entrepreneur of the Year, 2025",
 ];
 
 /**
@@ -42,7 +42,7 @@ export function FounderSpotlight() {
               </figure>
             ) : (
               <figure className="lg:sticky lg:top-32">
-                <MonogramPlate initials="M" />
+                <MonogramPlate />
                 <figcaption className="mt-4 font-display text-[1.05rem]">
                   {founder.name}
                   <span className="mt-1 block font-sans text-[0.6875rem] uppercase tracking-[0.22em] text-taupe">

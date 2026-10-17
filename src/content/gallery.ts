@@ -111,6 +111,70 @@ export const galleryItems: GalleryItem[] = [
       "Mid-production in the atelier. The gown is pinned on the stand for its final fitting, with the pearl-edged veil positioned over the bodice to check the fall of the drape.",
     tags: ["atelier", "reception"],
   },
+  {
+    slug: "bridal-white-beaded-corset",
+    alt: "Client in a white hand-beaded corset with a sheer yoke and cap sleeves, worn with a draped white satin skirt and a silver clutch, photographed in a pale interior.",
+    caption: "White beaded corset and draped satin skirt",
+    description:
+      "A modern alternative to the traditional gown: a hand-beaded white corset beneath a sheer yoke, paired with a satin skirt gathered into soft drape so the line stays long and quiet.",
+    tags: ["bridal", "reception"],
+  },
+  {
+    slug: "reception-fuchsia-beaded-lace",
+    alt: "Client in a fuchsia beaded lace mermaid gown with sheer embroidered long sleeves, a corseted bodice and a satin train draped from the shoulders, standing between full-height curtains.",
+    caption: "Fuchsia beaded lace with a draped satin train",
+    description:
+      "Beaded lace in fuchsia, with illusion sleeves, a sculpted bodice and a satin train that falls from the shoulder — a second entrance designed to hold the room.",
+    tags: ["reception", "bridal"],
+  },
+  {
+    slug: "reception-red-sequin-ruffle",
+    alt: "Client in a custom Magmens Couture red sequin mermaid gown with sculpted ruffle off-shoulder sleeves, a corseted bodice and a sweeping train, photographed in a doorway.",
+    caption: "Red sequin mermaid gown with ruffle sleeves",
+    description:
+      "A reception silhouette cut in red sequin: a corseted bodice, exaggerated ruffle sleeves that frame the shoulders, and a fishtail skirt that falls into a train.",
+    tags: ["reception", "occasion"],
+  },
+  {
+    slug: "traditional-copper-beaded-kente",
+    alt: "Client in a copper beaded tulle mermaid gown with a Kente-panel bust, densely beaded bodice and a train edged in red, black and white Kente cloth, photographed against a bronze backdrop.",
+    caption: "Copper beaded tulle with a Kente-panel bust",
+    description:
+      "Traditional couture built on beaded tulle: a Kente-panel bust, dense copper beadwork carried through the bodice, and a train finished in the same cloth.",
+    tags: ["traditional", "reception"],
+  },
+  {
+    slug: "traditional-kente-corset-train",
+    alt: "Client seen from behind in a hand-beaded Kente corset and matching Kente fishtail skirt tied with a red sash, the train fanned across the studio floor.",
+    caption: "Beaded Kente corset and fishtail train",
+    description:
+      "A two-piece traditional look: a beaded Kente corset and a fishtail skirt cut from the same cloth, gathered with a red sash and arranged so the train reads as one panel.",
+    tags: ["traditional"],
+  },
+  {
+    slug: "traditional-green-kente-corset",
+    alt: "Client in a green and gold beaded corseted gown with a striped Kente bust, holding a fan of green organdie discs embroidered with gold Adinkra symbols.",
+    caption: "Green and gold Kente corset with Adinkra fan",
+    description:
+      "Green and gold Kente interpreted entirely in beadwork: a corseted bodice, a striped bust panel and an organdie fan appliquéd with Adinkra symbols for the ceremonial photographs.",
+    tags: ["traditional", "occasion"],
+  },
+  {
+    slug: "traditional-kente-beaded-fishtail",
+    alt: "Client in a beaded multi-colour Kente gown with a coral fishtail train, holding a deep red beaded clutch, photographed against a bronze studio backdrop.",
+    caption: "Beaded Kente gown with coral fishtail",
+    description:
+      "Kente motifs rendered in beadwork across a fitted gown, with a coral fishtail train and a beaded clutch — the studio's ceremonial register, made to be photographed.",
+    tags: ["traditional"],
+  },
+  {
+    slug: "atelier-kente-beaded-mannequin",
+    alt: "A multi-colour beaded Kente gown on a dress form inside the atelier, its bodice patterned in green, red, blue and gold beadwork above a sheer beaded waist.",
+    caption: "In the atelier: Kente beadwork on the stand",
+    description:
+      "A Kente-pattern gown pinned on the stand mid-production: beaded bodice, sheer corseted waist and a fitted skirt, checked for line and balance before the first fitting.",
+    tags: ["atelier", "traditional"],
+  },
 ];
 
 /** Gallery items filtered by a collection tag. */

@@ -31,6 +31,7 @@ type SuccessState = {
   message: string;
   occasion?: string;
   eventDate?: string;
+  preferredDate?: string;
 };
 
 const serviceOptions = [
@@ -108,6 +109,7 @@ export function ConsultationForm({
         message: body.message ?? "",
         occasion: String(data.get("occasion") ?? ""),
         eventDate: String(data.get("eventDate") ?? ""),
+        preferredDate: String(data.get("preferredDate") ?? ""),
       });
       form.reset();
       setImageName(null);
@@ -171,6 +173,23 @@ export function ConsultationForm({
           </Link>{" "}
           for how consultations are booked and confirmed.
         </p>
+
+        {success.id && success.preferredDate ? (
+          <div className="mt-8 border-t border-gold/25 pt-8">
+            <h3 className="eyebrow">Keep the date to hand</h3>
+            <p className="mt-3 max-w-xl text-[0.875rem] leading-relaxed text-espresso/85">
+              Add the date you requested to your own calendar. It is saved as
+              tentative until the studio confirms availability.
+            </p>
+            <a
+              href={`/api/booking/${success.id}/calendar`}
+              download="magmens-consultation.ics"
+              className="mt-5 inline-flex items-center justify-center gap-3 border border-espresso px-7 py-4 text-[0.6875rem] font-medium uppercase tracking-[0.22em] text-espresso transition-colors duration-500 ease-editorial hover:border-gold hover:text-gold"
+            >
+              Add to my calendar
+            </a>
+          </div>
+        ) : null}
 
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <a

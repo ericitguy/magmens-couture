@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Wordmark } from "./Wordmark";
 import { collections } from "@/content/collections";
@@ -13,6 +14,13 @@ export function SiteFooter() {
       <div className="shell py-16 md:py-20">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
+            <Image
+              src="/brand/magmens-monogram.png"
+              alt=""
+              width={640}
+              height={640}
+              className="mb-6 h-14 w-14"
+            />
             <Wordmark onDark />
             <p className="body-copy-on-dark measure-tight mt-6 text-[0.9375rem]">
               {brand.shortDescription} Every garment is designed, cut and
@@ -93,6 +101,14 @@ export function SiteFooter() {
                 className="link-editorial transition-colors duration-500 ease-editorial hover:text-gold"
               >
                 {contact.phoneDisplay}
+              </a>
+            </p>
+            <p className="mt-2 text-[0.9375rem] text-ivory/80">
+              <a
+                href={`mailto:${contact.email}`}
+                className="link-editorial break-all transition-colors duration-500 ease-editorial hover:text-gold"
+              >
+                {contact.email}
               </a>
             </p>
             <p className="mt-4">

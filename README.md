@@ -62,6 +62,7 @@ the hosting dashboard for production. Full explanations live in
 | `RESEND_API_KEY` | Recommended | Enables studio email alerts for new enquiries |
 | `ENQUIRY_NOTIFICATION_EMAIL` | Recommended | The studio inbox that receives those alerts |
 | `ENQUIRY_FROM_EMAIL` | After domain verification | The verified sender address |
+| `CALENDAR_FEED_TOKEN` | Recommended | Unlocks the private calendar feed of bookings |
 | `ADMIN_ACCESS_TOKEN` | Optional | Unlocks `/admin/enquiries?token=…` |
 
 Nothing here is exposed to the browser except `NEXT_PUBLIC_SITE_URL`.
@@ -106,6 +107,7 @@ Almost every word, photograph reference and policy on the site comes from
 | `story.ts` | Founder biography, timeline, craft pillars, pull quotes |
 | `journey.ts` | The four-step bespoke process, and the testimonial list |
 | `policies.ts` | The twelve official policies, version and last-updated date |
+| `payments.ts` | Published payment methods, Mobile Money and bank details |
 | `privacy.ts` | The privacy notice |
 
 Because these are typed modules, a typo in an image slug or a missing
@@ -118,6 +120,20 @@ photograph fails the build instead of shipping a broken page.
 **Change a policy.** Edit `src/content/policies.ts`, then update `version` and
 `lastUpdated` in the same file. The policies page and the footer both read from
 it.
+
+**Edit the payment details.** `src/content/payments.ts` holds the Mobile Money
+number, the bank account and the payment rules. The policies page shows them
+inside the payment section automatically. Only ever publish the studio's own
+verified details: a wrong account number is a fraud risk, not a typo.
+
+**Add an award or recognition.** Append to the `awards` array in
+`src/content/story.ts` — year, title, awarding body and one line of context. The
+founder page renders them as a numbered grid, newest first.
+
+**Replace the logo.** Overwrite `public/brand/magmens-monogram.png` (square PNG),
+then regenerate the favicons from it: `src/app/icon.png` at 512×512 and
+`src/app/apple-icon.png` at 180×180. The footer mark and the founder brand plate
+use the same file.
 
 **Add a testimonial.** Genuine, approved reviews only. Add them to the
 `testimonials` array in `src/content/journey.ts` and the placeholder section
@@ -148,7 +164,7 @@ is replaced by the photograph.
 
 ## Photography
 
-The originals supplied by the studio total roughly 26 MB, which is far too heavy
+The originals supplied by the studio total roughly 45 MB, which is far too heavy
 to serve directly. `npm run images` (`scripts/prepare-images.mjs`) produces:
 
 - a web master per photograph, longest edge 2400px, WebP quality 82, EXIF
@@ -224,6 +240,33 @@ anywhere in the code.
 store, under `data/uploads/`. That is appropriate for a boutique studio's
 volume; a bucket (Cloudflare R2 or S3) is the upgrade path if volumes grow.
 
+### Bookings on the studio's calendar
+
+Requests reach a calendar in three ways, all standard ICS, so Google Calendar,
+Apple Calendar and Outlook work without an OAuth app or a paid integration:
+
+1. **The studio subscribes once.** Set `CALENDAR_FEED_TOKEN`
+   (`openssl rand -hex 32`), open `/admin/enquiries?token=…`, and copy the feed
+   address shown there. Add it in Google Calendar under *Other calendars → From
+   URL*, in Apple Calendar under *File → New Calendar Subscription*, or in
+   Outlook under *Add calendar → Subscribe from web*. Every new consultation
+   request then appears automatically, refreshed hourly, marked **tentative**.
+2. **The alert email carries an invitation.** When Resend is configured, the
+   studio's notification includes a `.ics` attachment for the requested slot, so
+   it can be added to any calendar straight from the inbox.
+3. **The client gets the same slot.** The confirmation screen offers
+   *Add to my calendar*, which downloads the requested date and time. Requests
+   without a preferred date have nothing to schedule and no link is shown.
+
+Ghana is UTC+0 all year, so studio times are written as UTC stamps — correct in
+any calendar, in any country, with no time-zone database needed. Each entry
+records the request reference, occasion, collection, method and event date, and
+states that the appointment is not yet confirmed. The feed contains real client
+names, so treat its URL as a password: without the token the route returns 404.
+
+Requests are read from the same store as the admin view, so the feed only works
+once `DATABASE_URL` is set on the host. A local dev server shows local records.
+
 ---
 
 ## Before launch
@@ -236,12 +279,15 @@ These are the things only the studio can supply or approve:
    the studio is alerted to new enquiries. Verify the sending domain with
    SPF/DKIM records, then send a test enquiry to confirm delivery.
 3. **Set `ADMIN_ACCESS_TOKEN`** (long and random: `openssl rand -hex 32`) and
-   keep the URL private.
+   keep the URL private. Set `CALENDAR_FEED_TOKEN` too, subscribe to the feed
+   once on the studio's phone or calendar app, and send a test request to
+   confirm the slot appears.
 4. **Confirm the domain in `NEXT_PUBLIC_SITE_URL`.** The default in this build
    is `https://www.magmenscouture.com` as a placeholder; change it if the live
    domain differs. Canonical URLs, the sitemap and social previews all use it.
-5. **Founder portrait.** The founder section currently shows the studio's
-   monogram plate. See "Add the founder portrait" above.
+5. **Founder portrait.** The founder section currently shows the studio's logo
+   as a brand plate. A portrait would be stronger — see "Add the founder
+   portrait" above.
 6. **Approved testimonials.** None were supplied, so the client-experience
    section says so honestly instead of inventing reviews.
 7. **Business hours.** Not supplied, so they appear nowhere — including in
@@ -261,14 +307,16 @@ These are the things only the studio can supply or approve:
 11. **Consider a Google Business Profile** for "bridal designer in Obuasi"
     searches; the structured data already matches the site's stated details.
 
-### An unverified detail worth checking
+### One name to confirm
 
 Public reporting credits the founder as **Marian Gifty Mensah**, married name
-Dosaah, and mentions a global fashion-entrepreneur award. The website uses the
-name supplied in the brand brief — *Mrs. Marian Gifty Mensah-Dossah* — and does
-not name any award, because the brief asked that no achievements be added beyond
-the supplied brand information. If the studio wants the award and its exact
-title shown, add it to `src/content/story.ts`.
+Dosaah. The website uses the name supplied in the brand brief — *Mrs. Marian
+Gifty Mensah-Dossah*. Confirm the preferred published form and change it once in
+`src/content/site.ts` and `src/content/story.ts`; it also feeds the structured
+data.
+
+The nine awards and recognitions shown on the founder page are the studio's own
+supplied list, reproduced with their titles and awarding bodies intact.
 
 ---
 
@@ -281,7 +329,7 @@ Vercel is the lowest-friction option and is what the steps below assume.
 
 `public/photography`, `public/og` and `src/content/image-manifest.json` are
 **generated, but committed**. The build reads them; it never runs the image
-pipeline. `./photos` (the ~26 MB of originals) is committed too, so the pipeline
+pipeline. `./photos` (the ~45 MB of originals) is committed too, so the pipeline
 can be re-run for new work. Everything else that is generated or local —
 `.next`, `node_modules`, `data`, `.env*` — is ignored.
 

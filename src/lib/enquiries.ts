@@ -233,11 +233,71 @@ export async function listEnquiries(limit = 100): Promise<StoredEnquiry[]> {
   }
 }
 
-function mapRow(row: Record<string, unknown>): StoredEnquiry {
-  const text = (value: unknown): string | undefined =>
-    typeof value === "string" && value.length > 0 ? value : undefined;
+/**
+ * One request by its reference. Used to build a calendar entry for a client
+ * who has just submitted a request, so only the id they were given can reach
+ * their own record.
+ */
+export async function getEnquiry(
+  id: string,
+): Promise<StoredEnquiry | undefined> {
+  // Ids are UUIDs; anything else cannot match and is rejected before a lookup.
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id)) {
+    return undefined;
+  }
 
-  const createdAt = row.created_at;
+  if (storageBackend() === "postgres") {
+    const { neon } = await import("@neondatabase/serverless");
+    await ensureSchema();
+    const sql = neon(databaseUrl()!);
+
+    const rows = (await sql`
+      select id, kind, status, created_at, name, email, phone, country,
+             occasion, service, event_date, preferred_date, preferred_time,
+             method, budget, subject, message, inspiration,
+             image_filename is not null as has_image
+      from enquiries
+      where id = ${id}
+      limit 1
+    `) as Record<string, unknown>[];
+
+    return rows[0] ? mapRow(rows[0]) : undefined;
+  }
+
+  try {
+    const contents = await readFile(ENQUIRY_FILE, "utf8");
+    for (const line of contents.split("\n")) {
+      if (!line.includes(id)) continue;
+      const parsed = JSON.parse(line) as Record<string, unknown>;
+      if (parsed.id === id) {
+        return mapRow({
+          ...parsed,
+          created_at: parsed.createdAt,
+          has_image: Boolean(parsed.image),
+        });
+      }
+    }
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+function mapRow(row: Record<string, unknown>): StoredEnquiry {
+  /**
+   * Postgres returns snake_case columns; the file store keeps the camelCase
+   * field names it wrote. Both have to read correctly, or a locally stored
+   * record silently loses its dates.
+   */
+  const text = (...keys: string[]): string | undefined => {
+    for (const key of keys) {
+      const value = row[key];
+      if (typeof value === "string" && value.length > 0) return value;
+    }
+    return undefined;
+  };
+
+  const createdAt = row.created_at ?? row.createdAt;
   return {
     id: String(row.id),
     kind: row.kind as EnquiryKind,
@@ -248,18 +308,18 @@ function mapRow(row: Record<string, unknown>): StoredEnquiry {
         : String(createdAt ?? ""),
     name: String(row.name ?? ""),
     email: String(row.email ?? ""),
-    phone: text(row.phone),
-    country: text(row.country),
-    occasion: text(row.occasion),
-    service: text(row.service),
-    eventDate: text(row.event_date),
-    preferredDate: text(row.preferred_date),
-    preferredTime: text(row.preferred_time),
-    method: text(row.method),
-    budget: text(row.budget),
-    subject: text(row.subject),
-    message: text(row.message),
-    inspiration: text(row.inspiration),
+    phone: text("phone"),
+    country: text("country"),
+    occasion: text("occasion"),
+    service: text("service"),
+    eventDate: text("event_date", "eventDate"),
+    preferredDate: text("preferred_date", "preferredDate"),
+    preferredTime: text("preferred_time", "preferredTime"),
+    method: text("method"),
+    budget: text("budget"),
+    subject: text("subject"),
+    message: text("message"),
+    inspiration: text("inspiration"),
     hasImage: Boolean(row.has_image),
   };
 }

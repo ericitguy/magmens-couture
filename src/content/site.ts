@@ -36,8 +36,7 @@ export const contact = {
   phoneDisplay: "+233 24 830 4463",
   phoneE164: "+233248304463",
   whatsappNumber: "233248304463",
-  /** No studio email address has been supplied — enquiries arrive by form or WhatsApp. */
-  email: null as string | null,
+  email: "mariangiftymensah@gmail.com",
   address: {
     lines: [
       "Obuasi New Estate",
@@ -86,9 +85,9 @@ export const socials: SocialLink[] = [
   },
   {
     label: "TikTok",
-    handle: "Magmens Couture Ghwears for women",
+    handle: "Magmens Couture Gh",
     url: "https://www.tiktok.com/@magmens_couture2",
-    note: "Studio films and gown reveals.",
+    note: "Studio films, runway moments and gown reveals.",
   },
 ];
 

@@ -15,6 +15,9 @@ data/
 
 .DS_Store
 
+# Raw photo drop-off folder — originals are curated into ./photos
+more photos/
+
 # Editor / agent workspace metadata
 .freebuff/
 .idea/
