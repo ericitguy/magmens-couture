@@ -51,6 +51,11 @@ const SOURCES = [
   },
   // Studio photography added October 2026.
   { source: "reception-red-sequin.jpg", slug: "reception-red-sequin-ruffle" },
+  // The October 17, 2026 awards. The Triumph Fashion Icon entry referenced an
+  // unprepared photograph, so the build stopped. Only the Ghana Outstanding
+  // Personality red gown photograph is retained here; the unused trophy image
+  // was removed from the pipeline and the awards list.
+  { source: "award-gopa-red-gown-2024.jpg", slug: "award-gopa-red-gown-2024" },
   {
     source: "traditional-copper-kente-bust.png",
     slug: "traditional-copper-beaded-kente",
@@ -71,11 +76,19 @@ const SOURCES = [
     source: "atelier-kente-beaded-mannequin.png",
     slug: "atelier-kente-beaded-mannequin",
   },
+
+  // New award photographs from October 17, 2026.
+  { source: "WhatsApp Image 2026-10-17 at 12.19.28.jpeg", slug: "award-citation-2026" },
+  { source: "WhatsApp Image 2026-10-17 at 12.19.28 (1).jpeg", slug: "award-collective-2026" },
+  { source: "WhatsApp Image 2026-10-17 at 12.19.28 (2).jpeg", slug: "award-gopa-2026" },
   { source: "reception-fuchsia-lace.png", slug: "reception-fuchsia-beaded-lace" },
   {
     source: "bridal-white-beaded-corset.png",
     slug: "bridal-white-beaded-corset",
   },
+  { source: "WhatsApp Image 2026-10-17 at 11.57.30.jpeg", slug: "award-seated-portrait-115730", },
+  { source: "WhatsApp Image 2026-10-17 at 11.58.07.jpeg", slug: "award-seated-portrait-115807", },
+  { source: "WhatsApp Image 2026-10-17 at 11.58.44.jpeg", slug: "award-seated-portrait-115844", },
 ];
 
 /**

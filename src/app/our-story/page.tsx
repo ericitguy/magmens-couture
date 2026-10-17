@@ -9,6 +9,7 @@ import { MonogramPlate } from "@/components/ui/MonogramPlate";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { getGalleryItem } from "@/content/gallery";
+import type { GalleryItem } from "@/content/gallery";
 import { brand } from "@/content/site";
 import { awards, craftQuotes, founder, milestones } from "@/content/story";
 import { socialImage } from "@/lib/social-image";
@@ -26,6 +27,23 @@ export const metadata: Metadata = {
     images: [socialImage("bridal-ivory-ballgown-portrait")],
   },
 };
+
+/**
+ * Resolves the gallery record for a prepared award photograph. The awards
+ * list only ever references slugs the photography pipeline has prepared, and
+ * the gallery record always carries alt and caption, so neither fallback is
+ * reachable at runtime. `resolveImage` throws during the build when a slug is
+ * misspelled or unprepared, so a broken picture can never reach production
+ * unnoticed.
+ */
+function awardImage(image: string | null): GalleryItem | null {
+  if (image == null) return null;
+  const record = getGalleryItem(image);
+  if (!record) {
+    throw new Error(`Award references an unprepared photograph: ${image}.`);
+  }
+  return record;
+}
 
 const ATELIER_SLUG = "atelier-mermaid-mannequin";
 const DETAIL_SLUG = "bridal-ivory-ballgown-portrait";
@@ -52,7 +70,8 @@ export default function OurStoryPage() {
             <Reveal className="lg:col-span-5">
               {founder.portraitSlug ? (
                 <figure className="group">
-                  <div className="relative aspect-4/5 w-full overflow-hidden bg-porcelain">
+                  {/* 2:3 matches the supplied portrait, so no part of her is cropped. */}
+                  <div className="relative aspect-2/3 w-full overflow-hidden bg-porcelain">
                     <EditorialImage
                       slug={founder.portraitSlug}
                       alt={`${founder.name}, ${founder.role} of ${brand.name}.`}
@@ -162,34 +181,50 @@ export default function OurStoryPage() {
             title="Recognised in Ghana and beyond."
             intro="A decade of work, acknowledged from Accra to Banjul — for design, for craftsmanship, and for building a fashion business that creates opportunity for others."
           />
-
           <ol className="mt-14 grid gap-px border border-gold/25 bg-gold/25 sm:grid-cols-2">
-            {awards.map((award, index) => (
-              <Reveal
-                key={`${award.year}-${award.title}`}
-                as="li"
-                delay={index * 60}
-                className="flex flex-col bg-ivory p-6 md:p-8"
-              >
-                <div className="flex items-baseline justify-between gap-4">
-                  <span className="font-display text-[1.05rem] tracking-[0.12em] text-gold">
-                    {award.year}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="text-[0.75rem] text-gold/60"
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <h3 className="display-3 mt-4">{award.title}</h3>
-                <p className="mt-3 text-[0.6875rem] uppercase leading-relaxed tracking-[0.18em] text-taupe">
-                  {award.organisation}
-                </p>
-                <p className="body-copy mt-4 text-[0.9375rem]">{award.body}</p>
-              </Reveal>
-            ))}
-          </ol>
+            {awards.map((award, index) => {
+              const record = awardImage(award.image!);
+              return (
+                <Reveal
+                  key={`${award.year}-${award.title}`}
+                  as="li"
+                  delay={index * 60}
+                  className="flex flex-col bg-ivory p-6 md:p-8"
+                >
+                  <div className="flex items-baseline justify-between gap-4">
+                    <span className="font-display text-[1.05rem] tracking-[0.12em] text-gold">
+                      {award.year}
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      className="text-[0.75rem] text-gold/60"
+                    >
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3 className="display-3 mt-4">{award.title}</h3>
+                  <p className="mt-3 text-[0.6875rem] uppercase leading-relaxed tracking-[0.18em] text-taupe">
+                    {award.organisation}
+                  </p>
+                  <p className="body-copy mt-4 text-[0.9375rem]">{award.body}</p>
+                  {record && (
+                    <figure className="mt-6 group">
+                      <div className="relative aspect-[5/4] w-full overflow-hidden bg-porcelain">
+                        <EditorialImage
+                          slug={record.slug}
+                          alt={record.alt}
+                          sizes="(min-width: 1024px) 30vw, 60vw"
+                          zoom
+                        />
+                      </div>
+                      <figcaption className="mt-2 text-[0.75rem] text-taupe">
+                        {record.caption.trim()}
+                      </figcaption>
+                    </figure>
+                  )}
+                </Reveal>
+              );
+            })}          </ol>
         </Container>
       </Section>
 

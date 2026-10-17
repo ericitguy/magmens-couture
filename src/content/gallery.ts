@@ -129,11 +129,43 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     slug: "reception-red-sequin-ruffle",
-    alt: "Client in a custom Magmens Couture red sequin mermaid gown with sculpted ruffle off-shoulder sleeves, a corseted bodice and a sweeping train, photographed in a doorway.",
+    alt: "Mrs. Marian Gifty Mensah-Dossah, founder and CEO of Magmens Couture, in a custom red sequin mermaid gown with sculpted ruffle off-shoulder sleeves, a corseted bodice and a sweeping train, photographed in a doorway.",
     caption: "Red sequin mermaid gown with ruffle sleeves",
     description:
-      "A reception silhouette cut in red sequin: a corseted bodice, exaggerated ruffle sleeves that frame the shoulders, and a fishtail skirt that falls into a train.",
+      "Worn by the house's founder: a reception silhouette cut in red sequin, with a corseted bodice, exaggerated ruffle sleeves that frame the shoulders, and a fishtail skirt that falls into a train.",
     tags: ["reception", "occasion"],
+  },
+  {
+    slug: "award-gopa-red-gown-2024",
+    alt: "Mrs. Marian Gifty Mensah-Dossah in a floor-length red gown accepting the Ghana Outstanding Personality Award for the Fashion & Lifestyle category, with the GOPA stage banner reading Ghana Outstanding Personality Award visible behind her.",
+    caption: "Ghana Outstanding Personality Award — Fashion & Lifestyle, 2024",
+    description:
+      "Mrs. Marian Gifty Mensah-Dossah receiving the Ghana Outstanding Personality Award in the Fashion & Lifestyle category in 2024, in a red crepe dress with crystal embellishment beside an embroidered fan. The GOPA stage banner behind her reads Ghana Outstanding Personality Award.",
+    tags: ["traditional", "occasion"],
+  },
+  {
+    slug: "award-seated-portrait-115730",
+    alt: "Mrs. Marian Gifty Mensah-Dossah, founder and CEO of Magmens Couture, accepting an award in 2026, holding a gold-and-black award plaque with her name on the base.",
+    caption: "Award acceptance portrait, 2026",
+    description:
+      "Mrs. Marian Gifty Mensah-Dossah, founder and CEO of Magmens Couture, accepting an award in 2026. She holds a gold-and-black award plaque with her name and title engraved on its base.",
+    tags: ["atelier", "occasion"],
+  },
+  {
+    slug: "award-seated-portrait-115807",
+    alt: "Mrs. Marian Gifty Mensah-Dossah in a red gown accepting an award at a stage ceremony, with a Ghanaian flag visible behind her.",
+    caption: "Award acceptance, Ghana stage ceremony",
+    description:
+      "Mrs. Marian Gifty Mensah-Dossah accepting an award at a Ghanaian stage ceremony in a red gown. A Ghanaian flag is visible behind her.",
+    tags: ["traditional", "occasion"],
+  },
+  {
+    slug: "award-seated-portrait-115844",
+    alt: "Mrs. Marian Gifty Mensah-Dossah holding a Triumph Fashion Icon trophy, a gold-and-black trophy with a star on top.",
+    caption: "Triumph Fashion Icon trophy",
+    description:
+      "Mrs. Marian Gifty Mensah-Dossah holding the Triumph Fashion Icon trophy: a gold-and-black trophy with a star on top.",
+    tags: ["atelier", "occasion"],
   },
   {
     slug: "traditional-copper-beaded-kente",

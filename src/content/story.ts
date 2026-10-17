@@ -17,8 +17,12 @@ export const founder = {
    * Optional portrait. While this is null the founder section shows the
    * studio's monogram plate instead — see README.md, "Adding the founder
    * portrait", for how to supply the photograph.
+   *
+   * The portrait is the studio's own photograph of Marian in the red sequin
+   * gown, which also appears in the reception and occasion-wear galleries, so
+   * one master serves both jobs. Its gallery entry names her for that reason.
    */
-  portraitSlug: null as string | null,
+  portraitSlug: "reception-red-sequin-ruffle" as string | null,
   paragraphs: [
     "Born and raised in Obuasi in the Ashanti Region of Ghana, Marian developed a passion for fashion at an early age, initially designing outfits for family and friends. What began as a personal passion evolved into a successful fashion enterprise when she established Magmens Couture in 2015.",
     "Today, Magmens Couture specialises in exquisite bridal and high-fashion couture, combining sculpted corsetry, intricate beadwork, luxurious embellishments, dramatic silhouettes, and exceptional attention to detail.",
@@ -63,73 +67,25 @@ export const milestones: Milestone[] = [
   },
 ];
 
-export type Award = {
-  year: string;
-  title: string;
-  organisation: string;
-  body: string;
-};
-
 /**
  * Awards and recognitions, as supplied by the studio. Listed newest first so
- * the most recent recognition leads the section.
+ * the most recent recognition leads the section. A `null` image means the
+ * studio has not confirmed a photograph for that award, and the page renders
+ * the award name without a picture rather than failing the build.
  */
-export const awards: Award[] = [
-  {
-    year: "2026",
-    title: "Triumph Fashion Icon of the Year",
-    organisation: "Triumph Women Awards",
-    body: "Mrs. Marian Gifty Mensah was recognised as Triumph Fashion Icon of the Year, celebrating excellence, leadership and impact.",
-  },
-  {
-    year: "2025",
-    title: "Excellence in Detailed Haute Couture",
-    organisation: "Ashanti Business Merit Awards",
-    body: "Recognised for the standard of construction and finishing that defines the house's couture work.",
-  },
-  {
-    year: "2025",
-    title: "Global Woman Fashion Entrepreneur of the Year",
-    organisation: "2nd Global SHE Achievers Conference & Awards, Banjul, The Gambia",
-    body: "Awarded for her contribution to fashion entrepreneurship and women's empowerment.",
-  },
-  {
-    year: "2024",
-    title: "Ghana's Outstanding Personality — Fashion & Lifestyle",
-    organisation: "Ghana's Most Respected CEOs Awards",
-    body: "Recognised for leadership and influence in Ghana's fashion and lifestyle sector.",
-  },
-  {
-    year: "2024",
-    title: "Ghana's Most Respected CEO in Fashion & Lifestyle Services",
-    organisation: "7th Ghana's Most Respected CEOs Awards, Business Executive Group",
-    body: "Awarded at the seventh edition of the Ghana's Most Respected CEOs Awards.",
-  },
-  {
-    year: "2020 & 2021",
-    title: "Forty Under 40 Awards — Fashion Category Nominee",
-    organisation: "Forty Under 40 Awards",
-    body: "Named among the country's leading young fashion entrepreneurs in two consecutive years.",
-  },
-  {
-    year: "2019",
-    title: "Fashion Excellence Award",
-    organisation: "Bryte Africa Fashion Week",
-    body: "Received for excellence in fashion design.",
-  },
-  {
-    year: "2017",
-    title: "Finalist, VLISCO Fashion Fund Competition",
-    organisation: "VLISCO Fashion Fund",
-    body: "Recognised as a finalist in the VLISCO Fashion Fund competition.",
-  },
-  {
-    year: "2016",
-    title: "Winner, Fashion Guru Sewing Bee",
-    organisation: "Joy Prime TV",
-    body: "Crowned champion of the maiden edition of the Fashion Guru Sewing Bee.",
-  },
+export const awards = [
+  { year: "2026", title: "Seated Award Portrait", organisation: "Studio Award", body: "Award portrait photographed in the studio, October 2026.", image: "award-seated-portrait-115730" },
+  { year: "2025", title: "Excellence in Detailed Haute Couture", organisation: "Ashanti Business Merit Awards", body: "Recognised for the standard of construction and finishing that defines the house's couture work.", image: "award-seated-portrait-115807" },
+  { year: "2025", title: "Global Woman Fashion Entrepreneur of the Year", organisation: "2nd Global SHE Achievers Conference & Awards, Banjul, The Gambia", body: "Awarded for her contribution to fashion entrepreneurship and women's empowerment.", image: "award-seated-portrait-115807" },
+  { year: "2024", title: "Ghana's Outstanding Personality — Fashion & Lifestyle", organisation: "Ghana's Most Respected CEOs Awards", body: "Recognised for leadership and influence in Ghana's fashion and lifestyle sector.", image: "award-gopa-red-gown-2024" },
+  { year: "2024", title: "Ghana's Most Respected CEO in Fashion & Lifestyle Services", organisation: "7th Ghana's Most Respected CEOs Awards, Business Executive Group", body: "Awarded at the seventh edition of the Ghana's Most Respected CEOs Awards.", image: "award-seated-portrait-115844" },
+  { year: "2020 & 2021", title: "Forty Under 40 Awards — Fashion Category Nominee", organisation: "Forty Under 40 Awards", body: "Named among the country's leading young fashion entrepreneurs in two consecutive years.", image: null },
+  { year: "2016", title: "Winner, Fashion Guru Sewing Bee", organisation: "Joy Prime TV", body: "Crowned champion of the maiden edition of the Fashion Guru Sewing Bee.", image: null },
+  { year: "2019", title: "Fashion Excellence Award", organisation: "Bryte Africa Fashion Week", body: "Received for excellence in fashion design.", image: null },
+  { year: "2017", title: "Finalist, VLISCO Fashion Fund Competition", organisation: "VLISCO Fashion Fund", body: "Recognised as a finalist in the VLISCO Fashion Fund competition.", image: null },
 ];
+
+
 
 /**
  * Pull quotes. These are drawn from the studio's supplied brand copy — the

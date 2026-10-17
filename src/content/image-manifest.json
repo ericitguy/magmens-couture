@@ -95,6 +95,16 @@
     "blurDataURL": "data:image/webp;base64,UklGRigBAABXRUJQVlA4IBwBAACwBgCdASoYACQAPu1oqU6ppiOiKqwBMB2JbAC7IJmD2xdBVD6r1KaZYmxBJhEYnJ9rCNSYLZwEs2qC2e02OgD+6pb84iuE9VGF/O+KYbBZQFRcIj8NHe6VDFCFTBJXZxPUG8v5CfcMuBGkNINkSocG+LL4J9wDYDSRjYBDfFr1BvY/65sLg/+v8OcJ5rP5KVYhPy2+SEW8kznSpNfzTpvzNEszvbt+Fh0U36IvZ491bTsZHvZUXno1e2SJpvBAf+LCxo25Ot4Na4XF3YB+bimDV5kBdLyUMVs55z2GLXCcHrVfuc7jLE8Bh3zj7FOCzIAPqI6foMlPwjyKbDbxPEf+QmFxCSF0rCYMtP/hzi8I4dRQVczsv8UY8mAAAA==",
     "removedLetterbox": null
   },
+  "award-gopa-red-gown-2024": {
+    "slug": "award-gopa-red-gown-2024",
+    "file": "/photography/award-gopa-red-gown-2024.webp",
+    "width": 1125,
+    "height": 1559,
+    "aspectRatio": 0.7216,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRjYBAABXRUJQVlA4ICoBAADQBgCdASoYACEAPu1iqU6ppSOiNVQIATAdiWwAqSPKJeSU+vNEkqoZJIDsNgE6ZxwLT0AR2jMfao1A+22uYEAA/sjAk2vqgj8h0tkM2b1G3gYv4+Qs2V/Kh6sEpDLS4WiZ2BofIcmcOAaoOuZq5u6O03K2RQxXtjxw1gEfN2a6V5j67WDV017buzXHjC9DT5sBwW3drAef35pZ7/taNrs5v8lao+9bi2UKRtYYcalQQl/inEsQaNXe1aSzaN6W095QI9XHRlMo5HXpVzYT7VVw13ew9DTqdUbKJkSgA3NVGchF3shSp7xhzh0axAA0/VdizthxDlgsd6pJHpU+HVgLTfDmBIBSy3q6uBYSqGeMOAQtBhnGy3H9wIYhaNGmzV/RCvjmuBjZQAAA",
+    "removedLetterbox": null
+  },
   "traditional-copper-beaded-kente": {
     "slug": "traditional-copper-beaded-kente",
     "file": "/photography/traditional-copper-beaded-kente.webp",
@@ -145,6 +155,39 @@
     "blurDataURL": "data:image/webp;base64,UklGRkwBAABXRUJQVlA4IEABAAAQBwCdASoYACQAPu1mpk6ppaMiKq35MB2JbACdMstQFoXFvdAAFPXpXus6J9RhQNcjJJUXQg0ZZTjMc7w22Y2/+AD+3iLBix86GfBJcja6nYBuLE0Ohe78xfqEAjVBRb8gFlUAzO5ykR5J8jvBuXy7uPJyyeyajN7SmJ3U7DlmRD2+NVZjn2grjpUubYDVMk0Jzy5KzGcdtD1bk5mO4FgPY2JxkHVk1eKy02Gcu+OV3LCyemm0hh457bte82r/5kUZIMM1iLiMlGtvdRSs7e2E4tPpyX86IQZ9yZy4l8GYAy0B5F5T81HY4Cq78UZgaN2Qa4NrORnK+qQZ2yEr1ZnRAINS0LJO0REvIm2hkYHN33747gv3ArjNfHOJ/0Y0/qOTh47tUxvEcC61bWr5dyuVA3TsldPn7fI80TAKNYAAAA==",
     "removedLetterbox": null
   },
+  "award-citation-2026": {
+    "slug": "award-citation-2026",
+    "file": "/photography/award-citation-2026.webp",
+    "width": 919,
+    "height": 2039,
+    "aspectRatio": 0.4507,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRp4BAABXRUJQVlA4IJIBAABQCQCdASoYADUAPu1eqU+ppKOiMBgKATAdiWQAtRvPvPTY+wIMCV2uAP8cSxu00Wt6s+7pGeSrcuQ43h71PBy5etAeUAuYDw8hVM5+BzkYAT5uEAD+8xgMddodWA7UBhJppbDvbTYSMU9GZEYf6TGniYkXHxdnEDrI/mNE95upBOZY+bcARb41TIB9fXoYg9/UeU/YcJehIx+4csoB5p8/VtVWf7H0xeyA4UOXSeurGgCXJNoDe810jt8EkHXN6pDzlNG1OCMXHVrGBWZ1dC6gd2nAg5cPw+KiKWoUnHdOkkqm797HwioxqN+NN/6T4OJkrl3gOsr+TV3O/NDF/F7Ij+7YgX/E1a3rWh5Hd6KHBwx7yte3y2eGYdh2Gxi3QotjkuVCot5UTyVoqFw/94nKUVxKsCAo2+snK1JbgJGXHTINWyJjuTLvJ9BECgZ0TP7/0nRTztErM3KjoujVykvNBBHfafxy3de2FfKpV5Jta1cvpC6pjPFSYGMdiThTp/43R06ysVF8bA0zUhSo0TSgAAA=",
+    "removedLetterbox": {
+      "top": 9,
+      "bottom": 0
+    }
+  },
+  "award-collective-2026": {
+    "slug": "award-collective-2026",
+    "file": "/photography/award-collective-2026.webp",
+    "width": 1387,
+    "height": 2048,
+    "aspectRatio": 0.6772,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRjQBAABXRUJQVlA4ICgBAACwBgCdASoYACMAPu1wsFKppiSipWmZMB2JbAC/ayl6BTAAYgvy04Q+kirUXlDbZ5VG5caqmFnY3m4BZeWZYADJdJOzoIvgcaeFsbpESnROLZ4M1ffYVpF/pSr80tn4pNtcRXDkrH5YJZBug08EanPvtQnpks0Z4PtHHGn3jCMA8gYZ9PIcB4MUz7XlpYbfiE2Qp+zQ0kFVkqgq0AId1mKfnfiA1tk6NP6cZW72wXacK4Fjd1XBbqNEbkn3pd0zbmgOexzYkGR15cLPok41y31YZKXB1Vfny2Hxeh3DF/xQA97iKqDqxOnD2pjb5NdxSkOT9Z6kKjSCSW7N9AJ0t2TeDthxBCHky98jc0dGnLgNkIJi1FRbN4AQi0oZQcA7DkdEe6lT2pT8AA==",
+    "removedLetterbox": null
+  },
+  "award-gopa-2026": {
+    "slug": "award-gopa-2026",
+    "file": "/photography/award-gopa-2026.webp",
+    "width": 2048,
+    "height": 1365,
+    "aspectRatio": 1.5004,
+    "orientation": "landscape",
+    "blurDataURL": "data:image/webp;base64,UklGRuwAAABXRUJQVlA4IOAAAAAwBQCdASoYABAAPu1iqU2ppaOiMAgBMB2JbACdMoLUC7AFUCgA9ziLNq/ZN7SUKJFQAADeVtBcgil3R9ff1Ry9dDxGw1bbqSQX1hANNxgVVuhngl9zN2MlzdvemVg6+NWkrO8PkWdxeIfdLQYkhu3Y+FC80nnS8850REAiZPEnt2hFOooj6+KCu6x9fd84Kxl7eSdHaRnbc7Yn2cPysJMMvtYMxiuAt3vS9DEK7VKXRZ3GZIEmtPm13zDIWSFRRJ8TbaA1LmMxH0BowP4SQii4/U9L9byz18zXz/GBbQAAAA==",
+    "removedLetterbox": null
+  },
   "reception-fuchsia-beaded-lace": {
     "slug": "reception-fuchsia-beaded-lace",
     "file": "/photography/reception-fuchsia-beaded-lace.webp",
@@ -163,6 +206,36 @@
     "aspectRatio": 0.5546,
     "orientation": "portrait",
     "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADwBQCdASoYACsAPu1aqE2ppKOiNVgIATAdiWIAtvfwATHsu8Wxw5Gd6FGEvg9I1JMfhvZFTfKgeAD+UcIpBd56oGsZrE4h5HdSiW35UXqXYLO0xEC29CMWXo3QcvFuDvgOuMTkPwQsWuCDgF93QtYcBcGQzXBrR7Ce0QZ+EOpLP/U31CJ1P0EaoqG+H4kuUV5rLMxUOAqetQwQSsiKnwRb36kkUVwAAAA=",
+    "removedLetterbox": null
+  },
+  "award-seated-portrait-115730": {
+    "slug": "award-seated-portrait-115730",
+    "file": "/photography/award-seated-portrait-115730.webp",
+    "width": 1800,
+    "height": 2400,
+    "aspectRatio": 0.75,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRhoBAABXRUJQVlA4IA4BAABQBgCdASoYACAAPu1ur1IppiQiqAgBMB2JbACxDQEIApDmhPOWFY+HcPfobYaizohzikV8lYRG5xy1QAD9IexZZYFBLAoEAV5BJ5hKiBx27Mf0QcCDYH8mNkP9JynNuER/3uUPBQroAg92yNz3TRKvX+ea+9w03dgXdVB8GjahtiVzUf3U9f63Kl0zjL1dmbpb6fJjkaIZFpCBsmvKQ4WQf1Ga6T4oymglcCugogszz9fHkeXR3XPMgSEb+QwkKXYPeXw8nXv+LO1OzgFPVCFY6zMdvbfYhEZ2rlmVTWgxnunPzWBE5xVjsVXipPRVZn6/xeh+bieo+7+kY5TGGS/YaTMkL0rohwC7I30AAAA=",
+    "removedLetterbox": null
+  },
+  "award-seated-portrait-115807": {
+    "slug": "award-seated-portrait-115807",
+    "file": "/photography/award-seated-portrait-115807.webp",
+    "width": 1125,
+    "height": 1559,
+    "aspectRatio": 0.7216,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRjYBAABXRUJQVlA4ICoBAADwBgCdASoYACEAPu1iqU6ppSOiNVQIATAdiWwAqSPKJeSaOuvEkqoZJIDsQFEy2JK55HKQDyEtGhTOZiUzEFFgAP7Iv/R/4Y0VhB+Dxq8ixhBfTpZvp1FuQxkZxdOrJofx0j/Gt0UiQAGGpQamaubujulErZFDFe2PHDWAR83ZrpXmPrtYNXTXt4/jqshsrmXCkVZ29bjJGOpI3FPMnWSN8z1DkRljsJPfSZ3sN7zVZOYvC30ftzoaQbbmYNYPD9BQHZQfTbQPu4iq78QDuM3Srgy5JtvSsilp8aXoe0AZC2V8uu32hp5awF6j7JuqioK5mm4ziTs6WzrzqrKWwdtAqNXd8/NcvuyfCppg8aQx35Y63jZB80gRDNcCQoFZYUbEcS7MOsG2gAAA",
+    "removedLetterbox": null
+  },
+  "award-seated-portrait-115844": {
+    "slug": "award-seated-portrait-115844",
+    "file": "/photography/award-seated-portrait-115844.webp",
+    "width": 1108,
+    "height": 2400,
+    "aspectRatio": 0.4617,
+    "orientation": "portrait",
+    "blurDataURL": "data:image/webp;base64,UklGRtoBAABXRUJQVlA4IM4BAAAQCQCdASoYADQAPu1iqE8ppSOiLBqsyTAdiWQAs7MNBsjQO0FM7VYt7CrP00sQLMbpt1xo+yzdqNRtGP60/sFXSUJYl35zr/zl4UP/AC2a2oAA/tvniQunC/UkmUhzr1njIN6IQCbkHLgDEJpO+kVE+GBV4PuiSuy8NFRooJ0XBEts+g2zIBjvU/FlbUdF2gW1UToO6wXQ12UtXmKDHaTIAymHIyTxp3M8XuFI4XPtiKeb+4jBa+CsVbPNd2Rib8JfqtMUdn3bAUqFtOx8nzm75PDVATWh3XEqXESA27NzwyDBr7XQRIM0M3fV+WVASLiZlHW/Nuf7KT38WG0MUxYr1lEXrJj12fhDw0YNTCgD+An6lopojxbDBhyrN+c6t0Ujh9lWXUXq4CmaepXKRyOZ4YR2MzupisL34Ax+xVcmzcosWxiLr/hlT2OLgkX8wGmxYf3vgXIH3tT2wFpmZrtcaVDt0cYbVjkwJKWMlOq14V1eqbbIlrCjFMbBLYjfgvD0/jY3nQrogjQZyl66gbWqh9Sa+DI9dgA+oINZFSj3xkbRwViuTcgdpODSs19Ue/X3pXZ1bzqqFEsDRLm555pexMceP35o9DI0T7WIAAA=",
     "removedLetterbox": null
   }
 }
