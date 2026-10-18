@@ -196,6 +196,18 @@ export function SiteFooter() {
             {policiesMeta.lastUpdated}
           </p>
         </div>
+
+        <p className="mt-4 text-[0.75rem] text-ivory/55">
+          Website designed by{" "}
+          <a
+            href="https://aitsapp.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-editorial transition-colors duration-500 ease-editorial hover:text-gold"
+          >
+            Appiah Information Technology Systems
+          </a>
+        </p>
       </div>
     </footer>
   );
